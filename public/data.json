@@ -1,0 +1,602 @@
+{
+    "classes": [
+      {
+        "serialNumber": 1,
+        "className": "Introduction to Photography",
+        "price": 99,
+        "availableSeats": 10,
+        "numberOfClasses": 5,
+        "reviews": 4.5,
+        "numberOfReviews": 25,
+        "level": "Beginner",
+        "enrolled":223,
+        "duration": "2 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage1.jpg",
+        "instructors": 
+          {
+            "image": "path/to/instructor1.jpg",
+            "name": "John Smith",
+            "email": "john@example.com",
+            "background": "John Smith is a professional photographer and filmmaker with over 10 years of experience. He has worked on numerous projects, including documentaries, short films, and commercial advertisements. His expertise lies in capturing breathtaking landscapes and telling compelling visual stories."
+          }
+        ,
+        "keyLearnings": {
+          "brief": "Learn the basics of photography and master the art of capturing stunning images.",
+          "keyFeatures": [
+            "Understanding camera settings and exposure",
+            "Composition and framing techniques",
+            "Lighting principles and techniques",
+            "Editing and post-processing tips"
+          ]
+        }
+      },
+
+
+      {
+        "serialNumber": 2,
+        "className": "Film Making 101",
+        "price": 149,
+        "availableSeats": 8,
+        "numberOfClasses": 10,
+        "reviews": 4.8,
+        "numberOfReviews": 40,
+        "level": "Intermediate",
+        "enrolled":204,
+        "duration": "4 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage2.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor2.jpg",
+            "name": "Emily Johnson",
+            "email": "emily@example.com",
+            "background": "Emily Johnson is an experienced filmmaker and cinematographer. She has a passion for storytelling through visual mediums and enjoys teaching aspiring filmmakers."
+          },
+          {
+            "image": "path/to/instructor3.jpg",
+            "name": "Michael Davis",
+            "email": "michael@example.com",
+            "background": "Michael Davis is a renowned filmmaker with extensive experience in directing and editing. He has worked on several award-winning films and enjoys sharing his knowledge with enthusiastic students."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Discover the art of film making and learn essential techniques to bring your creative vision to life.",
+          "keyFeatures": [
+            "Screenplay development and storytelling",
+            "Cinematography and camera techniques",
+            "Audio recording and sound design",
+            "Post-production editing and visual effects"
+          ]
+        }
+      },
+      {
+        "serialNumber": 3,
+        "className": "Advanced Photography Techniques",
+        "price": 129,
+        "availableSeats": 5,
+        "numberOfClasses": 8,
+        "reviews": 4.7,
+        "numberOfReviews": 30,
+        "level": "Intermediate",
+        "enrolled":124,
+        "duration": "3 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage3.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor4.jpg",
+            "name": "Sarah Thompson",
+            "email": "sarah@example.com",
+            "background": "Sarah Thompson is an accomplished professional photographer specializing in portrait and fashion photography. She has an eye for detail and enjoys sharing her knowledge with aspiring photographers."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Take your photography skills to the next level and learn advanced techniques to capture stunning images.",
+          "keyFeatures": [
+            "Advanced camera settings and exposure control",
+            "Creative composition and visual storytelling",
+            "Portrait lighting techniques",
+            "Image retouching and advanced editing"
+          ]
+        }
+      },
+      {
+        "serialNumber": 4,
+        "className": "Video Editing Masterclass",
+        "price": 149,
+        "availableSeats": 12,
+        "numberOfClasses": 6,
+        "reviews": 4.6,
+        "numberOfReviews": 20,
+        "level": "Intermediate",
+        "enrolled":234,
+        "duration": "3 weeks",
+        "category": "Video Editing",
+        "classCoverImage": "path/to/coverImage4.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor5.jpg",
+            "name": "Alex Ramirez",
+            "email": "alex@example.com",
+            "background": "Alex Ramirez is a skilled video editor with experience in various genres, including commercials, music videos, and short films. He enjoys teaching students the art of storytelling through editing."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Unlock the power of video editing software and learn to create captivating visual narratives.",
+          "keyFeatures": [
+            "Introduction to video editing software",
+            "Understanding timeline and editing techniques",
+            "Color grading and visual effects",
+            "Audio editing and sound design"
+          ]
+        }
+      },
+      {
+        "serialNumber": 5,
+        "className": "Cinematography Essentials",
+        "price": 119,
+        "availableSeats": 6,
+        "numberOfClasses": 8,
+        "reviews": 4.9,
+        "numberOfReviews": 35,
+        "level": "Intermediate",
+        "enrolled":594,
+        "duration": "4 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage5.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor3.jpg",
+            "name": "Michael Davis",
+            "email": "michael@example.com",
+            "background": "Michael Davis is a renowned filmmaker with extensive experience in directing and editing. He has worked on several award-winning films and enjoys sharing his knowledge with enthusiastic students."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Learn the essentials of cinematography and elevate the visual quality of your films.",
+          "keyFeatures": [
+            "Camera movement and framing techniques",
+            "Lighting for different moods and settings",
+            "Shot composition and visual aesthetics",
+            "Working with different lenses and filters"
+          ]
+        }
+      },
+      {
+        "serialNumber": 6,
+        "className": "Fundamentals of Screenwriting",
+        "price": 109,
+        "availableSeats": 8,
+        "numberOfClasses": 6,
+        "reviews": 4.7,
+        "numberOfReviews": 28,
+        "level": "Beginner",
+        "enrolled":432,
+        "duration": "3 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage6.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor6.jpg",
+            "name": "Jessica Anderson",
+            "email": "jessica@example.com",
+            "background": "Jessica Anderson is an experienced screenwriter with a passion for storytelling. She has written scripts for various genres, including drama, comedy, and thriller. Jessica loves helping aspiring writers develop their creative voice."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Learn the art of screenwriting and develop compelling narratives for film and television.",
+          "keyFeatures": [
+            "Story structure and plot development",
+            "Character creation and development",
+            "Dialogue writing and subtext",
+            "Script formatting and industry standards"
+          ]
+        }
+      },
+      {
+        "serialNumber": 7,
+        "className": "Digital Photography for Beginners",
+        "price": 79,
+        "availableSeats": 15,
+        "numberOfClasses": 4,
+        "reviews": 4.4,
+        "numberOfReviews": 18,
+        "level": "Beginner",
+        "enrolled":294,
+        "duration": "2 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage7.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor1.jpg",
+            "name": "John Smith",
+            "email": "john@example.com",
+            "background": "John Smith is a professional photographer and filmmaker with over 10 years of experience. He has worked on numerous projects, including documentaries, short films, and commercial advertisements. His expertise lies in capturing breathtaking landscapes and telling compelling visual stories."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Get started with digital photography and learn the fundamentals of capturing great images.",
+          "keyFeatures": [
+            "Understanding camera settings and modes",
+            "Composition and rule of thirds",
+            "Exposure and lighting basics",
+            "Image organization and basic editing"
+          ]
+        }
+      },
+      {
+        "serialNumber": 8,
+        "className": "Documentary Filmmaking",
+        "price": 159,
+        "availableSeats": 10,
+        "numberOfClasses": 8,
+        "reviews": 4.9,
+        "numberOfReviews": 45,
+        "level": "Intermediate",
+        "enrolled":234,
+        "duration": "4 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage8.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor2.jpg",
+            "name": "Emily Johnson",
+            "email": "emily@example.com",
+            "background": "Emily Johnson is an experienced filmmaker and cinematographer. She has a passion for storytelling through visual mediums and enjoys teaching aspiring filmmakers."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Learn the art of documentary filmmaking and tell compelling real-life stories.",
+          "keyFeatures": [
+            "Researching and developing documentary ideas",
+            "Interview techniques and capturing authentic moments",
+            "Documentary storytelling and narrative structure",
+            "Editing and post-production for documentaries"
+          ]
+        }
+      },
+      {
+        "serialNumber": 9,
+        "className": "Advanced Video Editing Techniques",
+        "price": 179,
+        "availableSeats": 6,
+        "numberOfClasses": 10,
+        "reviews": 4.7,
+        "numberOfReviews": 32,
+        "level": "Advanced",
+        "enrolled":104,
+        "duration": "5 weeks",
+        "category": "Video Editing",
+        "classCoverImage": "path/to/coverImage9.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor5.jpg",
+            "name": "Alex Ramirez",
+            "email": "alex@example.com",
+            "background": "Alex Ramirez is a skilled video editor with experience in various genres, including commercials, music videos, and short films. He enjoys teaching students the art of storytelling through editing."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Master advanced video editing techniques and create professional-grade visual content.",
+          "keyFeatures": [
+            "Advanced editing software and tools",
+            "Color grading and correction techniques",
+            "Motion graphics and visual effects",
+            "Advanced audio editing and mixing"
+          ]
+        }
+      },
+      {
+        "serialNumber": 10,
+        "className": "Portrait Photography Masterclass",
+        "price": 139,
+        "availableSeats": 8,
+        "numberOfClasses": 6,
+        "reviews": 4.8,
+        "numberOfReviews": 38,
+        "level": "Intermediate",
+        "enrolled":56,
+        "duration": "3 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage10.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor4.jpg",
+            "name": "Sarah Thompson",
+            "email": "sarah@example.com",
+            "background": "Sarah Thompson is an accomplished professional photographer specializing in portrait and fashion photography. She has an eye for detail and enjoys sharing her knowledge with aspiring photographers."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Learn the art of capturing captivating portraits and master the techniques of portrait photography.",
+          "keyFeatures": [
+            "Understanding lighting for portraits",
+            "Posing and directing subjects",
+            "Composition and background selection",
+            "Retouching and enhancing portrait images"
+          ]
+        }
+      },
+      {
+        "serialNumber": 11,
+        "className": "Screenwriting Workshop: Developing Compelling Characters",
+        "price": 99,
+        "availableSeats": 12,
+        "numberOfClasses": 4,
+        "reviews": 4.6,
+        "numberOfReviews": 22,
+        "level": "Intermediate",
+        "enrolled":212,
+        "duration": "2 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage11.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor6.jpg",
+            "name": "Jessica Anderson",
+            "email": "jessica@example.com",
+            "background": "Jessica Anderson is an experienced screenwriter with a passion for storytelling. She has written scripts for various genres, including drama, comedy, and thriller. Jessica loves helping aspiring writers develop their creative voice."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Master the art of creating compelling and memorable characters for your screenplays.",
+          "keyFeatures": [
+            "Character development techniques",
+            "Creating believable motivations",
+            "Writing strong and memorable dialogue",
+            "Exploring character arcs and growth"
+          ]
+        }
+      },
+      {
+        "serialNumber": 12,
+        "className": "Advanced Cinematography: Lighting and Mood",
+        "price": 169,
+        "availableSeats": 5,
+        "numberOfClasses": 8,
+        "reviews": 4.9,
+        "numberOfReviews": 42,
+        "level": "Advanced",
+        "enrolled":784,
+        "duration": "4 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage12.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor3.jpg",
+            "name": "Michael Davis",
+            "email": "michael@example.com",
+            "background": "Michael Davis is a renowned filmmaker with extensive experience in directing and editing. He has worked on several award-winning films and enjoys sharing his knowledge with enthusiastic students."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Explore advanced lighting techniques and master the art of creating mood through cinematography.",
+          "keyFeatures": [
+            "Working with natural and artificial light",
+            "Creating mood and atmosphere through lighting",
+            "Color theory and lighting combinations",
+            "Advanced camera movement and composition"
+          ]
+        }
+      },
+      {
+        "serialNumber": 13,
+        "className": "Introduction to Drone Photography",
+        "price": 129,
+        "availableSeats": 8,
+        "numberOfClasses": 6,
+        "reviews": 4.7,
+        "numberOfReviews": 33,
+        "level": "Intermediate",
+        "enrolled":321,
+        "duration": "3 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage13.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor1.jpg",
+            "name": "John Smith",
+            "email": "john@example.com",
+            "background": "John Smith is a professional photographer and filmmaker with over 10 years of experience. He has worked on numerous projects, including documentaries, short films, and commercial advertisements. His expertise lies in capturing breathtaking landscapes and telling compelling visual stories."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Learn the essentials of aerial photography and capture stunning images with drones.",
+          "keyFeatures": [
+            "Drone operation and safety guidelines",
+            "Composition and framing from above",
+            "Utilizing different camera settings",
+            "Editing and enhancing drone photography"
+          ]
+        }
+      },
+      {
+        "serialNumber": 14,
+        "className": "Documentary Editing Techniques",
+        "price": 139,
+        "availableSeats": 6,
+        "numberOfClasses": 8,
+        "reviews": 4.8,
+        "numberOfReviews": 37,
+        "level": "Intermediate",
+        "enrolled":236,
+        "duration": "3 weeks",
+        "category": "Video Editing",
+        "classCoverImage": "path/to/coverImage14.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor5.jpg",
+            "name": "Alex Ramirez",
+            "email": "alex@example.com",
+            "background": "Alex Ramirez is a skilled video editor with experience in various genres, including commercials, music videos, and short films. He enjoys teaching students the art of storytelling through editing."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Discover the techniques and strategies for editing compelling documentaries.",
+          "keyFeatures": [
+            "Structuring a documentary narrative",
+            "Working with real-life footage and interviews",
+            "Sequencing and pacing in documentary editing",
+            "Enhancing the emotional impact of a documentary"
+          ]
+        }
+      },
+      {
+        "serialNumber": 15,
+        "className": "Fashion Photography Essentials",
+        "price": 119,
+        "availableSeats": 8,
+        "numberOfClasses": 6,
+        "reviews": 4.7,
+        "numberOfReviews": 30,
+        "level": "Intermediate",
+        "enrolled":284,
+        "duration": "3 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage15.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor4.jpg",
+            "name": "Sarah Thompson",
+            "email": "sarah@example.com",
+            "background": "Sarah Thompson is an accomplished professional photographer specializing in portrait and fashion photography. She has an eye for detail and enjoys sharing her knowledge with aspiring photographers."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Explore the world of fashion photography and learn the techniques for capturing stunning fashion images.",
+          "keyFeatures": [
+            "Working with models and stylists",
+            "Posing and directing fashion shoots",
+            "Understanding fashion trends and aesthetics",
+            "Editing and retouching fashion photographs"
+          ]
+        }
+      },
+      {
+        "serialNumber": 16,
+        "className": "Screenwriting Workshop: Crafting Compelling Dialogue",
+        "price": 99,
+        "availableSeats": 12,
+        "numberOfClasses": 4,
+        "reviews": 4.6,
+        "numberOfReviews": 24,
+        "level": "Intermediate",
+        "enrolled":34,
+        "duration": "2 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage16.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor6.jpg",
+            "name": "Jessica Anderson",
+            "email": "jessica@example.com",
+            "background": "Jessica Anderson is an experienced screenwriter with a passion for storytelling. She has written scripts for various genres, including drama, comedy, and thriller. Jessica loves helping aspiring writers develop their creative voice."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Master the art of writing compelling and impactful dialogue for your screenplays.",
+          "keyFeatures": [
+            "Crafting realistic and engaging dialogue",
+            "Subtext and non-verbal communication",
+            "Writing dialogue for different genres",
+            "Understanding character voice and language"
+          ]
+        }
+      },
+      {
+        "serialNumber": 17,
+        "className": "Color Grading for Video",
+        "price": 129,
+        "availableSeats": 8,
+        "numberOfClasses": 6,
+        "reviews": 4.8,
+        "numberOfReviews": 36,
+        "level": "Intermediate",
+        "enrolled":234,
+        "duration": "3 weeks",
+        "category": "Video Editing",
+        "classCoverImage": "path/to/coverImage17.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor5.jpg",
+            "name": "Alex Ramirez",
+            "email": "alex@example.com",
+            "background": "Alex Ramirez is a skilled video editor with experience in various genres, including commercials, music videos, and short films. He enjoys teaching students the art of storytelling through editing."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Master the art of color grading and enhance the visual aesthetics of your videos.",
+          "keyFeatures": [
+            "Understanding color theory and psychology",
+            "Color grading techniques for different genres",
+            "Creating visual styles and moods",
+            "Matching colors and achieving consistency"
+          ]
+        }
+      },
+      {
+        "serialNumber": 18,
+        "className": "Wedding Photography Workshop",
+        "price": 149,
+        "availableSeats": 10,
+        "numberOfClasses": 6,
+        "reviews": 4.9,
+        "numberOfReviews": 41,
+        "level": "Intermediate",
+        "enrolled":234,
+        "duration": "3 weeks",
+        "category": "Photography",
+        "classCoverImage": "path/to/coverImage18.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor4.jpg",
+            "name": "Sarah Thompson",
+            "email": "sarah@example.com",
+            "background": "Sarah Thompson is an accomplished professional photographer specializing in portrait and fashion photography. She has an eye for detail and enjoys sharing her knowledge with aspiring photographers."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Learn the techniques and strategies for capturing beautiful wedding photographs.",
+          "keyFeatures": [
+            "Preparing for a wedding shoot",
+            "Posing and directing couples and groups",
+            "Capturing candid moments and emotions",
+            "Editing and delivering wedding photographs"
+          ]
+        }
+      },
+      {
+        "serialNumber": 19,
+        "className": "Film Production: From Script to Screen",
+        "price": 189,
+        "availableSeats": 8,
+        "numberOfClasses": 10,
+        "reviews": 4.7,
+        "numberOfReviews": 28,
+        "level": "Advanced",
+        "enrolled":234,
+        "duration": "5 weeks",
+        "category": "Film Making",
+        "classCoverImage": "path/to/coverImage19.jpg",
+        "instructors": [
+          {
+            "image": "path/to/instructor2.jpg",
+            "name": "Emily Johnson",
+            "email": "emily@example.com",
+            "background": "Emily Johnson is an experienced filmmaker and cinematographer. She has a passion for storytelling through visual mediums and enjoys teaching aspiring filmmakers."
+          }
+        ],
+        "keyLearnings": {
+          "brief": "Gain a comprehensive understanding of the entire film production process, from scriptwriting to post-production.",
+          "keyFeatures": [
+            "Screenwriting and story development",
+            "Casting and pre-production planning",
+            "Cinematography and camera techniques",
+            "Editing, sound design, and post-production"
+          ]
+        }
+      }
+    ]
+  }
+  

@@ -20,7 +20,7 @@ const Navbar = () => {
     </>
   )
   return (
-    <div className="md:px-24 px-4 shadow-md bg-slate-700  text-white w-full fixed z-10   bg-opacity-10   ">
+    <div className="md:px-24 px-4 shadow-md bg-slate-700  text-white w-full fixed z-10   bg-opacity-40   ">
       <div className="navbar  ">
         <div className="navbar-start">
           <div className="dropdown">
