@@ -29,8 +29,6 @@ const Categories = () => {
                         <img src="" alt="" />
                         <h2 className="2xl font-semibold">{category}</h2>
                         </div>
-
-
                     </div>
                     
                     

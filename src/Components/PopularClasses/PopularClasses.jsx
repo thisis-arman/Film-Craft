@@ -10,6 +10,7 @@ const PopularClasses = () => {
             .then(res => res.json())
             .then(data => setClassesData(data.classes))
     }, [])
+    
     // const classes =JSON.parse(classesData).Classes;
     const sortedClass = classesData.sort((a, b) => b.enrolled - a.enrolled);
     const popularClasses=(sortedClass).slice(0, 6);
