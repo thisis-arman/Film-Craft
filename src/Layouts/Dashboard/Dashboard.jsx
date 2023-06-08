@@ -23,38 +23,30 @@ const Dashboard = () => {
 
                         {/* Sidebar content here */}
                         {isAdmin ?<>
-                            <li><Link to='dashboard'>Admin Dashboard</Link></li>
-                        <li><Link to='manage-courses'>Manage Courses</Link></li>
+                            <li><Link to='admin'>Admin Dashboard</Link></li>
+                        <li><Link to='manage-classes'>Manage classes</Link></li>
                         <li><Link to='manage-users'>Manage Users</Link></li>
                         </>:
                         isInstructor ?<>
                         
-                        <li><Link to='dashboard'>Instructor Dashboard</Link></li>
-                        <li><Link to='manage-courses'>Manage Courses</Link></li>
+                        <li><Link to='instructor'>Instructor Dashboard</Link></li>
+                        <li><Link to='manage-classes'>Manage classes</Link></li>
                         <li><Link to='manage-users'>Manage students</Link></li>
                         </>
                         :
-                       <> <li><Link to='dashboard'>Dashboard</Link></li>
+                       <> <li><Link to='student'>Dashboard</Link></li>
                         <li><Link to='selected-courses'>Selected Courses</Link></li>
                         <li><Link to='enrolled-courses'>Enrolled Courses</Link></li>
                         </>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+
                         
                         }
                         {/* <li><Link to='dashboard'>Admin Dashboard</Link></li> */}
 
                         <div className="divider"></div>
                         <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/'>Instructors</Link></li>
-                        <li><Link to='/'>Classes</Link></li>
+                        <li><Link to='/instructors'>Instructors</Link></li>
+                        <li><Link to='/classes'>Classes</Link></li>
                         {/* <li><Link to='/'>Home</Link></li> */}
                     </ul>
 

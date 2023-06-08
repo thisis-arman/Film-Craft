@@ -383,7 +383,7 @@
       "ClassName": "Travel Photography",
       "image":"https://images.unsplash.com/photo-1489914169085-9b54fdd8f2a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
       "Price": 119,
-      "availableSeats": 10,
+      "availableSeats": 0,
       "numberOfClasses": 6,
       "reviews": 4.6,
       "numberOfReviews": 10,

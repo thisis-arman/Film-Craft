@@ -7,6 +7,9 @@ import Instructors from "../Pages/Instructors/Instructors";
 import Classes from "../Pages/Classes/Classes";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
+import ManageClasses from "../Pages/Dashboard/ManageClasses/ManageClasses";
+import AdminDashboard from "../Pages/Dashboard/AdminDashboard.jsx/AdminDashboard";
+import ClassDetails from "../Pages/ClassDetails/ClassDetails";
 
 
 
@@ -28,6 +31,11 @@ const router = createBrowserRouter([
         element:<Classes/>
     },
     {
+        path:'class/:id',
+        element:<ClassDetails/>,
+        loader:({params})=>fetch(`http://localhost:5000/classes/${params.id}`)
+    },
+    {
         path:'sign-up',
         element:<SignUp/>
 
@@ -43,8 +51,16 @@ const router = createBrowserRouter([
         element:<Dashboard/>,
         children:[
             {
+                path:'admin',
+                element:<AdminDashboard/>
+            },
+            {
                 path:'manage-users',
                 element:<ManageUsers/>
+            },
+            {
+                path:'manage-classes',
+                element:<ManageClasses/>
             }
         ]
     }
