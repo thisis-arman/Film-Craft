@@ -5,6 +5,8 @@ import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import Instructors from "../Pages/Instructors/Instructors";
 import Classes from "../Pages/Classes/Classes";
+import Dashboard from "../Layouts/Dashboard/Dashboard";
+import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 
 
 
@@ -35,6 +37,16 @@ const router = createBrowserRouter([
         element:<SignIn/>
     }
       ]
+    },
+    {
+        path:'dashboard',
+        element:<Dashboard/>,
+        children:[
+            {
+                path:'manage-users',
+                element:<ManageUsers/>
+            }
+        ]
     }
   ]);
 
