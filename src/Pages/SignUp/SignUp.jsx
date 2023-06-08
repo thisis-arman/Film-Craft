@@ -9,7 +9,6 @@ import Swal from 'sweetalert2'
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
-
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();

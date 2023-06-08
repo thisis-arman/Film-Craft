@@ -1,0 +1,449 @@
+[
+    {
+      "serialNumber": 1,
+      "ClassName": "Photography Basics",
+      "Price": 99,
+      "availableSeats": 15,
+      "numberOfClasses": 6,
+      "reviews": 4.5,
+      "image":"https://images.unsplash.com/photo-1486916856992-e4db22c8df33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      "numberOfReviews": 12,
+      "level": "Beginner",
+      "durations": "2 weeks",
+      "category": "Photography",
+      "instructor": "John Smith",
+      "keyLearnings": {
+        "brief": "Learn the fundamentals of photography and camera controls.",
+        "keyFeatures": [
+          "Understanding exposure",
+          "Composition techniques",
+          "Mastering manual mode"
+        ]
+      },
+      "enrolled": 8
+    },
+    {
+      "serialNumber": 2,
+      "ClassName": "Film Making 101",
+      "Price": 149,
+      "availableSeats": 12,
+      "numberOfClasses": 8,
+      "reviews": 4.8,
+      "numberOfReviews": 10,
+      "level": "Intermediate",
+      "durations": "3 weeks",
+      "category": "Film Making",
+      "instructor": "Emily Johnson",
+      "keyLearnings": {
+        "brief": "Introduction to the art of film making and storytelling.",
+        "keyFeatures": [
+          "Scriptwriting essentials",
+          "Cinematography techniques",
+          "Film editing basics"
+        ]
+      },
+      "enrolled": 5
+    },
+    {
+      "serialNumber": 3,
+      "ClassName": "Advanced Camera Functions",
+      "Price": 129,
+      "availableSeats": 8,
+      "numberOfClasses": 4,
+      "reviews": 4.2,
+      "numberOfReviews": 6,
+      "level": "Advanced",
+      "durations": "1 week",
+      "category": "Photography",
+      "instructor": "Robert Davis",
+      "keyLearnings": {
+        "brief": "Unlock the full potential of your camera and explore advanced techniques.",
+        "keyFeatures": [
+          "Mastering exposure modes",
+          "Using advanced focusing techniques",
+          "Creative use of camera settings"
+        ]
+      },
+      "enrolled": 3
+    },
+    {
+      "serialNumber": 4,
+      "ClassName": "Video Editing Fundamentals",
+      "Price": 79,
+      "availableSeats": 10,
+      "numberOfClasses": 5,
+      "reviews": 4.4,
+      "numberOfReviews": 8,
+      "level": "Beginner",
+      "durations": "2 weeks",
+      "category": "Video Editing",
+      "instructor": "Sarah Adams",
+      "keyLearnings": {
+        "brief": "Learn the basics of video editing using popular software.",
+        "keyFeatures": [
+          "Importing and organizing footage",
+          "Basic editing techniques",
+          "Adding transitions and effects"
+        ]
+      },
+      "enrolled": 6
+    },
+    {
+      "serialNumber": 5,
+      "ClassName": "Cinematography Masterclass",
+      "Price": 199,
+      "availableSeats": 6,
+      "numberOfClasses": 10,
+      "reviews": 4.9,
+      "numberOfReviews": 15,
+      "level": "Advanced",
+      "durations": "4 weeks",
+      "image":"https://images.unsplash.com/photo-1594872669240-fed145319207?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80",
+      "category": "Film Making",
+      "instructor": "Michael Brown",
+      "keyLearnings": {
+        "brief": "Explore advanced cinematography techniques for film production.",
+        "keyFeatures": [
+          "Understanding lighting setups",
+          "Camera movement and stabilization",
+          "Creating visually stunning shots"
+        ]
+      },
+      "enrolled": 10
+    },
+    {
+      "serialNumber": 6,
+      "ClassName": "Portrait Photography",
+      "Price": 89,
+      "availableSeats": 12,
+      "numberOfClasses": 6,
+      "reviews": 4.7,
+      "numberOfReviews": 9,
+      "level": "Intermediate",
+      "durations": "3 weeks",
+      "category": "Photography",
+      "instructor": "Emma Roberts",
+      "keyLearnings": {
+        "brief": "Learn techniques to capture compelling and expressive portraits.",
+        "keyFeatures": [
+          "Working with natural and artificial light",
+          "Posing and directing subjects",
+          "Post-processing for portrait enhancement"
+        ]
+      },
+      "enrolled": 4
+    },
+    {
+      "serialNumber": 7,
+      "ClassName": "Documentary Filmmaking",
+      "Price": 149,
+      "availableSeats": 8,
+      "numberOfClasses": 8,
+      "reviews": 4.6,
+      "numberOfReviews": 11,
+      "level": "Intermediate",
+      "durations": "4 weeks",
+      "image":"https://images.unsplash.com/photo-1497015455546-1da71faf8d06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
+      "category": "Film Making",
+      "instructor": "David Thompson",
+      "keyLearnings": {
+        "brief": "Discover the art of creating engaging and impactful documentary films.",
+        "keyFeatures": [
+          "Research and story development",
+          "Interview techniques",
+          "Editing and post-production for documentaries"
+        ]
+      },
+      "enrolled": 7
+    },
+    {
+      "serialNumber": 8,
+      "ClassName": "Photo Editing with Adobe Lightroom",
+      "Price": 69,
+      "availableSeats": 10,
+      "numberOfClasses": 4,
+      "reviews": 4.3,
+      "numberOfReviews": 7,
+      "level": "Beginner",
+      "durations": "2 weeks",
+      "category": "Photography",
+      "instructor": "Daniel Johnson",
+      "keyLearnings": {
+        "brief": "Learn the essentials of photo editing using Adobe Lightroom software.",
+        "keyFeatures": [
+          "Importing and organizing photos",
+          "Basic adjustments and retouching",
+          "Applying presets and creative effects"
+        ]
+      },
+      "enrolled": 2
+    },
+    {
+      "serialNumber": 9,
+      "ClassName": "Storyboarding for Filmmaking",
+      "Price": 79,
+      "availableSeats": 12,
+      "numberOfClasses": 5,
+      "reviews": 4.4,
+      "numberOfReviews": 8,
+      "level": "Intermediate",
+      "image":"https://images.unsplash.com/photo-1681372751322-55c23e00f702?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "durations": "2 weeks",
+      "category": "Film Making",
+      "instructor": "Olivia Turner",
+      "keyLearnings": {
+        "brief": "Learn the art of visual storytelling through storyboard creation.",
+        "keyFeatures": [
+          "Developing shot sequences",
+          "Creating storyboards for different genres",
+          "Collaborating with directors and cinematographers"
+        ]
+      },
+      "enrolled": 9
+    },
+    {
+      "serialNumber": 10,
+      "ClassName": "Fashion Photography",
+      "Price": 119,
+      "availableSeats": 8,
+      "numberOfClasses": 6,
+      "reviews": 4.5,
+      "numberOfReviews": 13,
+      "level": "Intermediate",
+      "durations": "3 weeks",
+      "category": "Photography",
+      "instructor": "Sophia Martinez",
+      "keyLearnings": {
+        "brief": "Learn the art of capturing stunning fashion photographs.",
+        "keyFeatures": [
+          "Working with professional models",
+          "Creating concept-driven fashion shoots",
+          "Editing and retouching for fashion photography"
+        ]
+      },
+      "enrolled": 5
+    },
+    {
+      "serialNumber": 11,
+      "ClassName": "Scriptwriting for Films",
+      "Price": 89,
+      "availableSeats": 10,
+      "numberOfClasses": 6,
+      "reviews": 4.6,
+      "numberOfReviews": 9,
+      "level": "Beginner",
+      "durations": "2 weeks",
+      "category": "Film Making",
+      "instructor": "William Turner",
+      "keyLearnings": {
+        "brief": "Learn the fundamentals of writing compelling scripts for films.",
+        "keyFeatures": [
+          "Understanding screenplay structure",
+          "Character development and dialogue writing",
+          "Script formatting and industry standards"
+        ]
+      },
+      "enrolled": 3
+    },
+    {
+      "serialNumber": 12,
+      "ClassName": "Music Video Production",
+      "Price": 129,
+      "availableSeats": 8,
+      "numberOfClasses": 7,
+      "reviews": 4.7,
+      "numberOfReviews": 11,
+      "level": "Intermediate",
+      "durations": "3 weeks",
+      "category": "Film Making",
+      "instructor": "Michael Johnson",
+      "keyLearnings": {
+        "brief": "Learn the process of producing creative and visually appealing music videos.",
+        "keyFeatures": [
+          "Concept development and storyboard creation",
+          "Shooting techniques for music videos",
+          "Editing and visual effects for music videos"
+        ]
+      },
+      "enrolled": 6
+    },
+    {
+      "serialNumber": 13,
+      "ClassName": "Drone Photography and Videography",
+      "Price": 159,
+      "availableSeats": 6,
+      "numberOfClasses": 5,
+      "reviews": 4.4,
+      "numberOfReviews": 8,
+      "level": "Intermediate",
+      "durations": "2 weeks",
+      "category": "Photography",
+      "instructor": "Adam Wilson",
+      "keyLearnings": {
+        "brief": "Master the art of aerial photography and videography using drones.",
+        "keyFeatures": [
+          "Drone operation and safety guidelines",
+          "Capturing stunning aerial shots",
+          "Editing and post-processing for drone footage"
+        ]
+      },
+      "enrolled": 2
+    },
+    {
+      "serialNumber": 14,
+      "ClassName": "Screenwriting Workshop",
+      "Price": 79,
+      "availableSeats": 12,
+      "numberOfClasses": 4,
+      "reviews": 4.2,
+      "numberOfReviews": 6,
+      "level": "Beginner",
+      "durations": "2 weeks",
+      "category": "Film Making",
+      "instructor": "Lucy Johnson",
+      "keyLearnings": {
+        "brief": "Learn the art of crafting engaging screenplays for films and TV.",
+        "keyFeatures": [
+          "Story structure and plot development",
+          "Character arcs and dialogue writing",
+          "Pitching and selling your screenplay"
+        ]
+      },
+      "enrolled": 4
+    },
+    {
+      "serialNumber": 15,
+      "ClassName": "Color Grading for Films",
+      "Price": 99,
+      "availableSeats": 10,
+      "numberOfClasses": 4,
+      "reviews": 4.3,
+      "numberOfReviews": 7,
+      "level": "Intermediate",
+      "durations": "2 weeks",
+      "image":"https://images.unsplash.com/photo-1515846865653-cfda085cca48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "category": "Film Making",
+      "instructor": "Andrew Davis",
+      "keyLearnings": {
+        "brief": "Learn the art of enhancing and manipulating colors in films.",
+        "keyFeatures": [
+          "Understanding color theory and psychology",
+          "Color grading techniques in popular software",
+          "Creating different moods through color grading"
+        ]
+      },
+      "enrolled": 7
+    },
+    {
+      "serialNumber": 16,
+      "ClassName": "Sports Photography",
+      "Price": 89,
+      "availableSeats": 12,
+      "numberOfClasses": 6,
+      "reviews": 4.5,
+      "numberOfReviews": 11,
+      "level": "Intermediate",
+      "durations": "3 weeks",
+      "category": "Photography",
+      "instructor": "Daniel Thompson",
+      "keyLearnings": {
+        "brief": "Capture the excitement and energy of sports through photography.",
+        "keyFeatures": [
+          "Mastering sports photography techniques",
+          "Capturing action shots and freeze motion",
+          "Post-processing for sports photography"
+        ]
+      },
+      "enrolled": 5
+    },
+    {
+      "serialNumber": 17,
+      "ClassName": "Film Directing Essentials",
+      "Price": 149,
+      "availableSeats": 8,
+      "numberOfClasses": 8,
+      "reviews": 4.7,
+      "numberOfReviews": 14,
+      "level": "Intermediate",
+      "durations": "4 weeks",
+      "category": "Film Making",
+      "instructor": "Julia Turner",
+      "keyLearnings": {
+        "brief": "Learn the fundamentals of directing and leading a film production.",
+        "keyFeatures": [
+          "Understanding the director's role",
+          "Working with actors and crew",
+          "Shot composition and visual storytelling"
+        ]
+      },
+      "enrolled": 6
+    },
+    {
+      "serialNumber": 18,
+      "ClassName": "Travel Photography",
+      "image":"https://images.unsplash.com/photo-1489914169085-9b54fdd8f2a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "Price": 119,
+      "availableSeats": 10,
+      "numberOfClasses": 6,
+      "reviews": 4.6,
+      "numberOfReviews": 10,
+      "level": "Intermediate",
+      "durations": "3 weeks",
+      "category": "Photography",
+      "instructor": "Sophia Johnson",
+      "keyLearnings": {
+        "brief": "Capture stunning travel photographs and tell compelling visual stories.",
+        "keyFeatures": [
+          "Planning and preparation for travel photography",
+          "Techniques for capturing landscapes and cultures",
+          "Post-processing and sharing travel photographs"
+        ]
+      },
+      "enrolled": 8
+    },
+    {
+      "serialNumber": 19,
+      "ClassName": "Film Production Management",
+      "Price": 129,
+      "availableSeats": 8,
+      "numberOfClasses": 5,
+      "reviews": 4.4,
+      "numberOfReviews": 9,
+      "level": "Intermediate",
+      "durations": "2 weeks",
+      "category": "Film Making",
+      "instructor": "Robert Johnson",
+      "keyLearnings": {
+        "brief": "Learn the essential skills to manage and organize film productions.",
+        "keyFeatures": [
+          "Pre-production planning and budgeting",
+          "Scheduling and coordinating cast and crew",
+          "Managing production logistics and resources"
+        ]
+      },
+      "enrolled": 4
+    },
+    {
+      "serialNumber": 20,
+      "ClassName": "Street Photography",
+      "Price": 79,
+      "availableSeats": 12,
+      "numberOfClasses": 4,
+      "reviews": 4.2,
+      "numberOfReviews": 7,
+      "level": "Beginner",
+      "durations": "2 weeks",
+      "category": "Photography",
+      "instructor": "Oliver Wilson",
+      "keyLearnings": {
+        "brief": "Capture candid moments and vibrant street scenes with your camera.",
+        "keyFeatures": [
+          "Developing an eye for street photography",
+          "Approaching and photographing strangers",
+          "Storytelling through street photography"
+        ]
+      },
+      "enrolled": 3
+    }
+  ]
+  

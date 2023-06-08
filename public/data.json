@@ -13,6 +13,7 @@
         "duration": "2 weeks",
         "category": "Photography",
         "classCoverImage": "path/to/coverImage1.jpg",
+        
         "instructors": 
           {
             "image": "path/to/instructor1.jpg",
@@ -20,6 +21,7 @@
             "email": "john@example.com",
             "background": "John Smith is a professional photographer and filmmaker with over 10 years of experience. He has worked on numerous projects, including documentaries, short films, and commercial advertisements. His expertise lies in capturing breathtaking landscapes and telling compelling visual stories."
           }
+          
         ,
         "keyLearnings": {
           "brief": "Learn the basics of photography and master the art of capturing stunning images.",
@@ -30,6 +32,7 @@
             "Editing and post-processing tips"
           ]
         }
+
       },
 
 

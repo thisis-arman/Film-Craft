@@ -8,6 +8,22 @@ const SocialLogin = () => {
   const {handleGoogleLogin}=useContext(AuthContext)
 const signInWithGoogle =()=>{
     handleGoogleLogin()
+    .then(result => {
+      const loggedInUser = result.user
+      const saveUser ={name:loggedInUser.displayName, email:loggedInUser.email}
+      fetch('http://localhost:5000/users',{
+        method: 'POST',
+        headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
+      })
+      .then(res =>res.json())
+      .then(data =>console.log(data))
+      console.log(loggedInUser)
+    })
+
+    .catch(error =>console.log(error))
 }
     return (
         <div>
