@@ -15,17 +15,26 @@ const ClassDetails = () => {
     const { ClassName, Price, durations, enrolled, category, image, keyLearnings, level, reviews, availableSeats, instructor } = singleClass;
     const handleAddToCart =(item) => {
         console.log(item)
-        if(user.email){
+        if(user && user.email){
             const cartItem ={ClassName,image,availableSeats,enrolled,Price,email:user?.email,classId:singleClass._id};
             fetch('http://localhost:5000/carts',{
                 method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(cartItem)
+                  headers: {
+                  'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(cartItem)
             })
             .then(res => res.json())
-            .then(data =>console.log(data))
+            .then(data =>{console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    icon:'success',
+                    title: 'Added to cart',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                // navigate('/cart')
+            }})
         }
         else{
             Swal.fire({
@@ -38,7 +47,7 @@ const ClassDetails = () => {
                 confirmButtonText: 'Login Now!'
               }).then((result) => {
                 if (result.isConfirmed) {
-                  navigate('/')
+                  navigate('/login')
                 }
               })
         }
