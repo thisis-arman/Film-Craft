@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useCart from "../../Hooks/useCart";
 
 
 const ClassDetails = () => {
     const {user}=useContext(AuthContext)
     console.log(user)
     const navigate =useNavigate()
+    const [,refetch] = useCart()
 
     const singleClass = useLoaderData()
     console.log('class details ', singleClass)
@@ -27,6 +29,7 @@ const ClassDetails = () => {
             .then(res => res.json())
             .then(data =>{console.log(data)
             if(data.insertedId){
+                refetch()
                 Swal.fire({
                     icon:'success',
                     title: 'Added to cart',

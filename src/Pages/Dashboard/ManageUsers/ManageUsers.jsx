@@ -20,7 +20,7 @@ const ManageUsers = () => {
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>
-                        <tr className="bg-base-300">
+                        <tr className="primary-design">
                             <th></th>
                             <th>Profile</th>
                             <th>Name</th>

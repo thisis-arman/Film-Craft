@@ -10,6 +10,7 @@ import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import ManageClasses from "../Pages/Dashboard/ManageClasses/ManageClasses";
 import AdminDashboard from "../Pages/Dashboard/AdminDashboard.jsx/AdminDashboard";
 import ClassDetails from "../Pages/ClassDetails/ClassDetails";
+import SelectedClasses from "../Pages/Dashboard/UserDashboard/SeletedClasses/SelectedClasses";
 
 
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
             {
                 path:'manage-classes',
                 element:<ManageClasses/>
+            },
+            {
+                path:'selected-classes',
+                element:<SelectedClasses/>
             }
         ]
     }

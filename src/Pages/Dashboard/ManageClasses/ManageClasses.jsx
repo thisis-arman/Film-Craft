@@ -20,7 +20,7 @@ const ManageClasses = () => {
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr className="bg-base-200">
+                        <tr className="primary-design">
                             <th>SL</th>
                             <th>Class Name</th>
                             <th>Price</th>
