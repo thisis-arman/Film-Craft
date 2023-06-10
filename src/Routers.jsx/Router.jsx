@@ -11,6 +11,11 @@ import ManageClasses from "../Pages/Dashboard/ManageClasses/ManageClasses";
 import AdminDashboard from "../Pages/Dashboard/AdminDashboard.jsx/AdminDashboard";
 import ClassDetails from "../Pages/ClassDetails/ClassDetails";
 import SelectedClasses from "../Pages/Dashboard/UserDashboard/SeletedClasses/SelectedClasses";
+import UserDashboard from "../Pages/Dashboard/UserDashboard/SeletedClasses/UserDashboard";
+import EnrolledClasses from "../Pages/Dashboard/UserDashboard/SeletedClasses/EnrolledClasses";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import AddClass from "../Pages/Dashboard/InstructorDashboard/AddCLass/AddClass";
+import MyClass from "../Pages/Dashboard/InstructorDashboard/AddCLass/MyClass";
 
 
 
@@ -18,6 +23,7 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <Main/>,
+      errorElement:<ErrorPage/>,
       children: [
     {
         path:'/',
@@ -32,7 +38,7 @@ const router = createBrowserRouter([
         element:<Classes/>
     },
     {
-        path:'class/:id',
+        path:'/class/:id',
         element:<ClassDetails/>,
         loader:({params})=>fetch(`http://localhost:5000/classes/${params.id}`)
     },
@@ -66,6 +72,22 @@ const router = createBrowserRouter([
             {
                 path:'selected-classes',
                 element:<SelectedClasses/>
+            },
+            {
+                path:'student',
+                element:<UserDashboard/>
+            },
+            {
+                path:'enrolled-classes',
+                element:<EnrolledClasses/>
+            },
+            {
+                path:'add-class',
+                element:<AddClass/>
+            },
+            {
+                path:'my-classes',
+                element:<MyClass/>
             }
         ]
     }

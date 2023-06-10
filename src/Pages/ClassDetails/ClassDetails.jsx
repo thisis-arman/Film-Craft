@@ -63,8 +63,8 @@ const ClassDetails = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className=" text-neutral-content">
                     <div className=" ">
-                        <h1 className="mb-5 text-5xl font-bold">{ClassName}</h1>
-                        <p className="mb-5">{keyLearnings.brief}</p>
+                        <h1 className="mb-5 text-5xl font-bold">{singleClass?.ClassName}</h1>
+                        <p className="mb-5">{keyLearnings?.brief}</p>
                         <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>
@@ -78,10 +78,10 @@ const ClassDetails = () => {
             <div className=" md:order-2 order-1 h-60 w-full">
            <div className="p-16 border m-8">
            <h2 className="text-2xl font-bold">key Learnings:</h2>
-           <p className="py-4">{keyLearnings.brief}</p>
+           <p className="py-4">{keyLearnings?.brief}</p>
            <p>
             {
-                keyLearnings.keyFeatures.map((item,i)=><li key={i}>{item}</li>)
+                keyLearnings?.keyFeatures?.map((item,i)=><li key={i}>{item}</li>)
             }
            </p>
 
@@ -91,17 +91,17 @@ const ClassDetails = () => {
             </div>
            <div className="relative order-2 md:order-2 md:right-10 mt-[70px] md:-top-60">
            <div className="card  rounded-none w-full md:w-96 bg-base-100 shadow-xl">
-                    <figure><img className="" src={image} alt="Shoes" /></figure>
+                    <figure><img className="" src={singleClass?.image} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title text-xl font-bold">{ClassName}</h2>
-                        <p className="font-bold text-2xl">${Price}</p>
+                        <h2 className="card-title text-xl font-bold">{singleClass?.ClassName}</h2>
+                        <p className="font-bold text-2xl">${singleClass?.Price}</p>
                         <div className="card-actions ">
                             <button onClick={()=>handleAddToCart(singleClass)} className="btn btn-outline btn-success w-full">Add To Cart</button>
                             <button className="btn btn-primary w-full">Buy Now</button>   
                         </div>
                         <p className="font-semibold text-xl my-2">Summery :</p>
-                        <p className="">Level: {level}</p>
-                        <p className="">Duration: {durations}</p>
+                        <p className="">Level: {singleClass?.level}</p>
+                        <p className="">Duration: {singleClass?.durations}</p>
                         
                     </div>
                     

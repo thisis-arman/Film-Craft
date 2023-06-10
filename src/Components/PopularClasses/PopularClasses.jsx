@@ -27,7 +27,7 @@ const PopularClasses = () => {
                {
                 popularClasses.map(cls=>
                    
-                    <Link to={`class/${cls._id}`} key={cls.serialNumber} className="card  hover:shadow-7xl hover:rounded-sm hover:shadow-slate-700 rounded-none w-[400px] mx-auto xl:w-[400px] md:w-[360px] h-[450px] bg-base-100 shadow-xl">
+                    <Link to={`/class/${cls._id}`} key={cls.serialNumber} className="card  hover:shadow-7xl hover:rounded-sm hover:shadow-slate-700 rounded-none w-[400px] mx-auto xl:w-[400px] md:w-[360px] h-[450px] bg-base-100 shadow-xl">
                     <figure className="max-h-60"><img className="max-h-60 w-full" src={cls.image} alt={cls.ClassName} /></figure>
                     <div className="p-4">
                         <p className="bg-white absolute top-0 right-0 m-4 p-1 px-2 rounded font-semibold">${cls.Price}</p>

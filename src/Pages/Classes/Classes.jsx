@@ -8,13 +8,15 @@ const Classes = () => {
     console.log('classdata', classesData)
 
     useEffect(() => {
-        fetch('Class.json')
+        fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => setClassesData(data))
     }, [])
     
     // const classes =JSON.parse(classesData).Classes;
     const sortedClass = classesData.sort((a, b) => b.enrolled - a.enrolled);
+    const approvedClasses =classesData.filter (item =>item.status === 'approved')
+    console.log(approvedClasses);
     // const popularClasses=(sortedClass).slice(0, 6);
     
     // const popularClasses =popularClasses.slice(0,6)
@@ -26,9 +28,9 @@ const Classes = () => {
 
             <div className="grid md:grid-cols-3 gap-5 ">
                {
-                sortedClass.map((cls,i)=>
+                approvedClasses.map((cls,i)=>
                    
-                <ClassCard key={i} cls={cls}></ClassCard>
+                <ClassCard  key={i} cls={cls}></ClassCard>
                     
                     
                     )

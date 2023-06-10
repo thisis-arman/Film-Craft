@@ -10,7 +10,7 @@ const signInWithGoogle =()=>{
     handleGoogleLogin()
     .then(result => {
       const loggedInUser = result.user
-      const saveUser ={name:loggedInUser.displayName, email:loggedInUser.email}
+      const saveUser ={name:loggedInUser.displayName, email:loggedInUser.email,role:"student"}
       fetch('http://localhost:5000/users',{
         method: 'POST',
         headers: {

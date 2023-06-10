@@ -3,6 +3,15 @@
 
 This is a summer camp based training programme website where student can learn all about film making ,camera functionailites, photography basics, video editing etc.
 
+## Tech Stack
+
+**Frontend:** React, TailwindCSS
+
+**Backend:** Node, Express,MongoDB
+
+**Tools:** daisy UI,TailBlockCC,React Router
+
+**Packages:** react-icons,JWT,React Router, React-query,Sweet-Alert
 
 
 # Features (Page  wise)
@@ -38,13 +47,5 @@ This is a summer camp based training programme website where student can learn a
 - I gained solid understaning on CRUD operations.Setting different types of roles based on websites need and for different role different kinds of dashboard and data.
 
 
-## Tech Stack
 
-**Frontend:** React, TailwindCSS
-
-**Backend:** Node, Express,MongoDB
-
-**Tools:** daisy UI,TailBlockCC,React Router
-
-**Packages:** react-icons,JWT,React Router, React-query,Sweet-Alert
 

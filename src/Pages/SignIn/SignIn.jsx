@@ -1,54 +1,43 @@
 import { useContext, useEffect, useState } from 'react';
-import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+// import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
-import { AuthContext } from '../../Provider/AuthProvider';
+
 import SocialLogin from '../../Components/Shared/SocialLogin';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const SignIn = () => {
-    const [disabled, setDisabled] = useState(true);
-    const { signIn } = useContext(AuthContext);
+    // const [disabled, setDisabled] = useState(true);
+    
+
+    const {signIn}=useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
 
     const from = location.state?.from?.pathname || "/";
 
-    useEffect(() => {
-        loadCaptchaEnginge(6);
-    }, [])
-
-    const handleLogin = event => {
-        event.preventDefault();
-        const form = event.target;
-        const email = form.email.value;
+ 
+    const handleSignIn =(event)=>{
+        event.preventDefault()
+        const form = event.target
         const password = form.password.value;
-        console.log(email, password);
+        const email = form.email.value;
+        console.log(password, email)
         signIn(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
+        .then(result =>{
+            const loggedUser = result.user;
+            if(loggedUser){
                 Swal.fire({
-                    title: 'User Login Successful.',
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Logged In successfully.',
+                    showConfirmButton: false,
+                    timer: 1500
                 });
-                navigate(from, { replace: true });
-            })
-    }
-
-    const handleValidateCaptcha = (e) => {
-        const user_captcha_value = e.target.value;
-        if (validateCaptcha(user_captcha_value)) {
-            setDisabled(false);
-        }
-        else {
-            setDisabled(true)
-        }
+            }
+            navigate(from, {replace:true})
+        })
     }
 
     return (
@@ -61,7 +50,9 @@ const SignIn = () => {
                         <img className="md:w-full w-1/2 text-center mx-auto" src="https://i.ibb.co/xL07jRB/Tablet-login-cuate.png" alt="" />
                     </div>
                     <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogin} className="card-body">
+
+
+                        <form onSubmit={handleSignIn}  className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -73,22 +64,22 @@ const SignIn = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" />
-                                <label className="label">
+                             {/*    <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                </label> */}
                             </div>
-                            <div className="form-control">
+                      {/*       <div className="form-control">
                                 <label className="label">
                                     <LoadCanvasTemplate />
                                 </label>
                                 <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
 
-                            </div>
+                            </div> */}
                             <div className="form-control mt-6">
-                                <input disabled={disabled} className=" btn text-white btn-primary" type="submit" value="Login" />
+                                <input  className="cursor-pointer py-2 primary-design" type="submit" value="Login" />
                             </div>
-                            <SocialLogin/>
                         </form>
+                            <SocialLogin/>
                         <p className='p-4'><small>New Here? <Link className="text-blue-600 underline font-bold" to="/sign-up">Create an account</Link> </small></p>
                     </div>
                 </div>
