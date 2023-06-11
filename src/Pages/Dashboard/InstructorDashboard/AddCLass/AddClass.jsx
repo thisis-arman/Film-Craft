@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const AddClass = () => {
     const { user } = useContext(AuthContext)
-    console.log('from user',user)
+    //console.log('from user',user)
 
     const handleAddClass =(event)=>{
         event.preventDefault();
@@ -18,7 +18,7 @@ const AddClass = () => {
         const category = form.category.value;
         const newClass ={name:user.displayName ,email,availableSeats,Price:price,image:photo,ClassName:className,
              category:category,status:"pending" ,enrolled:0}
-        console.log(newClass)
+        //console.log(newClass)
         fetch("http://localhost:5000/classes", {
             method:"POST",
             headers:{
@@ -29,7 +29,7 @@ const AddClass = () => {
     })
     .then(res =>res.json())
     .then(data =>{
-        console.log(data)
+        //console.log(data)
         if(data.insertedId){
             Swal.fire({
                 position: 'center',

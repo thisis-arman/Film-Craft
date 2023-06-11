@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import axios from "axios";
 
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../Firebase/firebase.config";
@@ -16,9 +17,9 @@ const AuthProvider = ({ children }) => {
   }
 
   const signIn = (email, password) => {
-    console.log('geting from signin',email, password)
+    //console.log('geting from signin', email, password)
     setLoading(true)
-    return signInWithEmailAndPassword(auth,email, password)
+    return signInWithEmailAndPassword(auth, email, password)
   }
 
 
@@ -32,7 +33,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const updateUserProfile = (name, photo) => {
-    console.log('authProvider ',name, photo);
+    //console.log('authProvider ', name, photo);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
@@ -45,8 +46,22 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
-      console.log("logged in user inside the auth state observer", loggedUser);
+      //console.log("logged in user inside the auth state observer", loggedUser);
       setUser(loggedUser);
+
+
+      if(loggedUser){
+        axios.post('http://localhost:5000/jwt',{email:loggedUser.email})
+        .then(data =>{
+          console.log(data)
+          localStorage.setItem('access_token', data.data.token)
+        })
+      }
+      else{
+        localStorage.removeItem('access_token')
+      }
+
+
       setLoading(false)
     });
     return () => {
@@ -129,7 +144,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const createUser = ( email, password) => {
-    console.log(email,password)
+    //console.log(email,password)
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -157,7 +172,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
-      console.log("logged in user inside the auth state observer", loggedUser);
+      //console.log("logged in user inside the auth state observer", loggedUser);
       setUser(loggedUser);
       setLoading(false)
     });

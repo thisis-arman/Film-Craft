@@ -7,7 +7,7 @@ AOS.init()
 
 const Categories = () => {
     const [classesData, setClassesData] = useState([])
-    // console.log('classdata', classesData)
+    // //console.log('classdata', classesData)
 
     useEffect(() => {
         fetch('data.json')
@@ -17,7 +17,7 @@ const Categories = () => {
     // const classes =JSON.parse(classesData).Classes;
     // const sortedClass = classesData.sort((a, b) => b.enrolled - a.enrolled);
     const uniqueCategories = [...new Set(classesData.map((classItem) => classItem.category))];
-    console.log('unique', uniqueCategories)
+    //console.log('unique', uniqueCategories)
 
 
 

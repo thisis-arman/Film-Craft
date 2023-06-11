@@ -8,7 +8,7 @@ import useCart from "../../Hooks/useCart";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
   const [cart]=useCart()
-  console.log(cart)
+  //console.log(cart)
 
   const handleLogOut = () => {
     logOut()
@@ -35,7 +35,7 @@ const Navbar = () => {
               {menuOptions}
             </ul>
           </div>
-          <Link to='/' className=" font-bold text-2xl">FILM <span className="">Carft</span></Link>
+          <Link to='/' className="uppercase font-bold text-2xl">FILM <span className="text-yellow-600 ">Carft</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -44,12 +44,26 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {/* cart */}
-          <Link >
+          <Link to='dashboard/selected-classes' >
             <div className="indicator mr-4">
               <span className="indicator-item badge badge-secondary ">+{cart.length || 0}</span>
               <button className="btn btn-ghost"> <FaCartPlus /></button>
             </div>
           </Link>
+
+         {/*  <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+        <li>
+          <a className="justify-between">
+            Profile
+            <span className="badge">New</span>
+          </a>
+        </li>
+        <li><a>Settings</a></li>
+        <li><a>Logout</a></li>
+      </ul> */}
+      {/* TODO:TRY TO MAKE PROFILE DROPDOWN TYPE */}
+
+
 
           {user ? <><Link onClick={handleLogOut} className="btn-primary">Sign Out</Link>
             <label tabIndex={0} className="ml-4 rounded-full btn-circle avatar">

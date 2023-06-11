@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { FaChalkboardTeacher, FaTrashAlt, FaUserAlt, FaUserShield } from "react-icons/fa";
+import { useQuery } from "react-query";
 import Swal from "sweetalert2";
 
 
 const ManageUsers = () => {
 
-    const [users, setUsers] = useState([])
+   /*  const [users, setUsers] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:5000/users')
@@ -13,10 +14,16 @@ const ManageUsers = () => {
             .then(data => setUsers(data))
 
     }, [])
-    console.log(users)
+    //console.log(users) */
+
+
+    const {data :users =[],refetch} =useQuery(['users'],async()=>{
+        const res = await fetch('http://localhost:5000/users')
+        return res.json();
+    })
 
     const handleMakeAdmin = (user) => {
-        console.log(user)
+        //console.log(user)
         fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: "PATCH",
             headers: {
@@ -25,8 +32,9 @@ const ManageUsers = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                //console.log(data)
                 if (data.modifiedCount > 0) {
+                    refetch()
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -39,7 +47,7 @@ const ManageUsers = () => {
             })
     }
     const handleMakeInstructor = (user) => {
-        console.log(user)
+        //console.log(user)
         fetch(`http://localhost:5000/users/instructor/${user._id}`, {
             method: "PATCH",
             headers: {
@@ -48,8 +56,9 @@ const ManageUsers = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                //console.log(data)
                 if (data.modifiedCount > 0) {
+                    refetch()
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',

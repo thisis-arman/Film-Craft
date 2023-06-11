@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const ManageClasses = () => {
     const [classesData, setClassesData] = useState([])
-    // console.log('classdata', classesData)
+    // //console.log('classdata', classesData)
 
     useEffect(() => {
         fetch('http://localhost:5000/classes')
@@ -14,7 +14,7 @@ const ManageClasses = () => {
     }, [])
 
 const makeApproved = (item) => {
-    console.log(item)
+    //console.log(item)
     fetch(`http://localhost:5000/classes/approved/${item._id}`, {
         method: "PATCH",
         headers: {
@@ -23,7 +23,7 @@ const makeApproved = (item) => {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            //console.log(data)
             if (data.modifiedCount > 0) {
                 Swal.fire({
                     position: 'top-end',
@@ -37,7 +37,7 @@ const makeApproved = (item) => {
         })
 }
 const makeDenied = (item) => {
-    console.log(item)
+    //console.log(item)
     fetch(`http://localhost:5000/classes/approved/${item._id}`, { 
         method: "PATCH",
         headers: {
@@ -46,7 +46,7 @@ const makeDenied = (item) => {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            //console.log(data)
             if (data.modifiedCount > 0) {
                 Swal.fire({
                     position: 'top-end',

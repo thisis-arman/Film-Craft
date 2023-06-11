@@ -7,13 +7,17 @@
 }
 
 .primary-design{
-  @apply text-white transition duration-200 rounded shadow-md  md:mb-0 bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
+  @apply text-white transition duration-300 rounded shadow-md  md:mb-0 bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
+}
+.sm-btn{
+  @apply text-white transition duration-200 mx-2 rounded shadow-md   bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
 }
 
 .drawer-side a.active ,.menu a.active {
 
   @apply text-white transition duration-200 rounded shadow-md  md:mb-0 bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
 }
+
 
 #drawer-side a {
   color: red;

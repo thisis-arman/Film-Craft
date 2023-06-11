@@ -3,20 +3,26 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useCart from "../../Hooks/useCart";
+import useVerifyUserRole from "../../Hooks/useVerifyUserRole";
 
 
 const ClassDetails = () => {
     const {user}=useContext(AuthContext)
-    console.log(user)
+    //console.log(user)
+    const [currentUserRole] = useVerifyUserRole()
+    //console.log(currentUserRole)
+
+
+
     const navigate =useNavigate()
     const [,refetch] = useCart()
 
     const singleClass = useLoaderData()
-    console.log('class details ', singleClass)
+    //console.log('class details ', singleClass)
     
     const { ClassName, Price, durations, enrolled, category, image, keyLearnings, level, reviews, availableSeats, instructor } = singleClass;
     const handleAddToCart =(item) => {
-        console.log(item)
+        //console.log(item)
         if(user && user.email){
             const cartItem ={ClassName,image,availableSeats,enrolled,Price,email:user?.email,classId:singleClass._id};
             fetch('http://localhost:5000/carts',{
@@ -27,7 +33,7 @@ const ClassDetails = () => {
                body: JSON.stringify(cartItem)
             })
             .then(res => res.json())
-            .then(data =>{console.log(data)
+            .then(data =>{//console.log(data)
             if(data.insertedId){
                 refetch()
                 Swal.fire({
@@ -96,7 +102,7 @@ const ClassDetails = () => {
                         <h2 className="card-title text-xl font-bold">{singleClass?.ClassName}</h2>
                         <p className="font-bold text-2xl">${singleClass?.Price}</p>
                         <div className="card-actions ">
-                            <button onClick={()=>handleAddToCart(singleClass)} className="btn btn-outline btn-success w-full">Add To Cart</button>
+                            <button onClick={()=>handleAddToCart(singleClass)} className={`btn btn-outline btn-success w-full `}>Add To Cart</button>
                             <button className="btn btn-primary w-full">Buy Now</button>   
                         </div>
                         <p className="font-semibold text-xl my-2">Summery :</p>

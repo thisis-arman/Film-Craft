@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const PopularClasses = () => {
     const [classesData, setClassesData] = useState([])
-    console.log('classdata', classesData)
+    //console.log('classdata', classesData)
 
     useEffect(() => {
         fetch('http://localhost:5000/classes')
@@ -17,13 +17,13 @@ const PopularClasses = () => {
     const popularClasses=(sortedClass).slice(0, 6);
     
     // const popularClasses =popularClasses.slice(0,6)
-    // console.log('popular',popularClasses)
+    // //console.log('popular',popularClasses)
 
     return (
         <div className="w-full md:px-10 mx-auto ">
             <h1 className="text-4xl font-bold text-center my-24">Popular Classes</h1>
 
-            <div className="grid md:grid-cols-3 gap-5 ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
                {
                 popularClasses.map(cls=>
                    

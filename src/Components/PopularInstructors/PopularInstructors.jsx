@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const PopularInstructors = () => {
     
     const [classesData, setClassesData] = useState([])
-    console.log('classdata', classesData)
+    //console.log('classdata', classesData)
 
     useEffect(() => {
         fetch('data.json')

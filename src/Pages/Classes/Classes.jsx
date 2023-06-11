@@ -5,7 +5,7 @@ import ClassCard from "../../Components/ClassCard/ClassCard";
 const Classes = () => {
 
    const [classesData, setClassesData] = useState([])
-    console.log('classdata', classesData)
+    //console.log('classdata', classesData)
 
     useEffect(() => {
         fetch('http://localhost:5000/classes')
@@ -16,11 +16,11 @@ const Classes = () => {
     // const classes =JSON.parse(classesData).Classes;
     const sortedClass = classesData.sort((a, b) => b.enrolled - a.enrolled);
     const approvedClasses =classesData.filter (item =>item.status === 'approved')
-    console.log(approvedClasses);
+    //console.log(approvedClasses);
     // const popularClasses=(sortedClass).slice(0, 6);
     
     // const popularClasses =popularClasses.slice(0,6)
-    // console.log('popular',popularClasses)
+    // //console.log('popular',popularClasses)
 
     return (
         <div className="w-full md:px-10 mx-auto ">

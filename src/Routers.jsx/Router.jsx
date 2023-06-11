@@ -16,6 +16,7 @@ import EnrolledClasses from "../Pages/Dashboard/UserDashboard/SeletedClasses/Enr
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AddClass from "../Pages/Dashboard/InstructorDashboard/AddCLass/AddClass";
 import MyClass from "../Pages/Dashboard/InstructorDashboard/AddCLass/MyClass";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
     },
     {
         path:'/class/:id',
-        element:<ClassDetails/>,
+        element:<PrivateRoute><ClassDetails/></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/classes/${params.id}`)
     },
     {

@@ -27,7 +27,7 @@ const SelectedClasses = () => {
         })
           .then(res => res.json())
           .then(data => {
-            console.log(data)
+            //console.log(data)
             if (data.deletedCount > 0) {
               refetch()
 
@@ -69,6 +69,7 @@ const SelectedClasses = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Price</th>
+              <th>Payment</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -81,6 +82,9 @@ const SelectedClasses = () => {
                   <td>{item.ClassName}</td>
                   <td>{item.email}</td>
                   <td>${item.Price}</td>
+                  <td >
+                    <button  className="primary-design px-4 py-1">Pay</button>
+                  </td>
                   <td className="flex gap-2">
                     <FaEdit className="w-5 cursor-pointer h-5" />
                     <FaTrashAlt onClick={() => handleDeleteItem(item)} className="text-red-600 w-5 cursor-pointer h-5" />

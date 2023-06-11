@@ -20,7 +20,7 @@ const signInWithGoogle =()=>{
       })
       .then(res =>res.json())
       .then(data =>console.log(data))
-      console.log(loggedInUser)
+      //console.log(loggedInUser)
     })
 
     .catch(error =>console.log(error))

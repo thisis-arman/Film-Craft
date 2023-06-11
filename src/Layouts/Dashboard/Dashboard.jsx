@@ -5,7 +5,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Dashboard = () => {
     const {user}=useContext(AuthContext)
-console.log(user)
+//console.log(user)
 const [savedUsers,setSavedUser]=useState([])
 
 useEffect(()=>{
@@ -19,9 +19,9 @@ const currentEmail = user.email
 
 const currentUser =savedUsers.filter(user => user.email === currentEmail && user)
 const currentUserRole = currentUser[0]?.role
-console.log(currentUserRole)
+//console.log(currentUserRole)
 
-// console.log(allEmails)
+// //console.log(allEmails)
 
 
    /*  const isAdmin=false;
@@ -43,6 +43,7 @@ console.log(currentUserRole)
 
 
                         {/* Sidebar content here */}
+                        
                         {currentUserRole==='admin' ?<>
                             <li><NavLink to='admin'>Admin Dashboard</NavLink></li>
                         <li><NavLink to='manage-classes'>Manage classes</NavLink></li>

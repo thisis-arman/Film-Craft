@@ -23,7 +23,7 @@ const SignIn = () => {
         const form = event.target
         const password = form.password.value;
         const email = form.email.value;
-        console.log(password, email)
+        //console.log(password, email)
         signIn(email, password)
         .then(result =>{
             const loggedUser = result.user;
@@ -35,8 +35,8 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+                navigate(from, {replace:true})
             }
-            navigate(from, {replace:true})
         })
     }
 
