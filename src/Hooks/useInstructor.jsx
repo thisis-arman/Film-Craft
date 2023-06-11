@@ -14,7 +14,7 @@ const {data: isInstructor, isLoading: isLoadingInstructor} =useQuery({
         const res = await axiosSecure.get(`/users/instructor/${user.email}`)
         console.log(res,' from use Instructor ')
 
-        return res.data.Instructor
+        return res.data.instructor
     }
 })
 return [ isInstructor, isLoadingInstructor]

@@ -10,7 +10,7 @@ const Dashboard = () => {
 
 const [isAdmin] =useAdmin()
 console.log(isAdmin,'is admin')
-const {isInstructor} =useInstructor()
+const [isInstructor] =useInstructor()
 console.log(isInstructor,'is he instructor')
 
    
@@ -54,12 +54,12 @@ const currentUserRole = currentUser[0]?.role
 
                         {/* Sidebar content here */}
                         
-                        {currentUserRole==='admin' ?<>
+                        {isAdmin==='admin' ?<>
                             <li><NavLink to='admin'>Admin Dashboard</NavLink></li>
                         <li><NavLink to='manage-classes'>Manage classes</NavLink></li>
                         <li><NavLink to='manage-users'>Manage Users</NavLink></li>
                         </>:
-                        currentUserRole ==='instructor' ?<>
+                        isInstructor ?<>
                         
                         <li><NavLink to='instructor'>Instructor Dashboard</NavLink></li>
                         <li><NavLink to='add-class'>Add A Class</NavLink></li>
