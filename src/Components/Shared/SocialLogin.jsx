@@ -2,10 +2,15 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 // import { AuthContext } from "../../Provider/AuthProvider";
 
 const SocialLogin = () => {
   const {handleGoogleLogin}=useContext(AuthContext)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
 const signInWithGoogle =()=>{
     handleGoogleLogin()
     .then(result => {
@@ -20,6 +25,9 @@ const signInWithGoogle =()=>{
       })
       .then(res =>res.json())
       .then(data =>console.log(data))
+
+      navigate(from, {replace:true})
+
       //console.log(loggedInUser)
     })
 

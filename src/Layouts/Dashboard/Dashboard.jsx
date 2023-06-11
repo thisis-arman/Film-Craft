@@ -1,9 +1,19 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useAdmin from "../../Hooks/useAdmin";
+import useInstructor from "../../Hooks/useInstructor";
 
 
 const Dashboard = () => {
+   
+
+const [isAdmin] =useAdmin()
+console.log(isAdmin,'is admin')
+const {isInstructor} =useInstructor()
+console.log(isInstructor,'is he instructor')
+
+   
     const {user}=useContext(AuthContext)
 //console.log(user)
 const [savedUsers,setSavedUser]=useState([])

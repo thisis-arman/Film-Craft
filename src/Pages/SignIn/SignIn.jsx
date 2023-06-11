@@ -1,21 +1,15 @@
 import { useContext, useEffect, useState } from 'react';
-// import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
-
 import SocialLogin from '../../Components/Shared/SocialLogin';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const SignIn = () => {
-    // const [disabled, setDisabled] = useState(true);
-    
-
     const {signIn}=useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
 
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || '/';
 
  
     const handleSignIn =(event)=>{
@@ -35,8 +29,8 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate(from, {replace:true})
             }
+            navigate(from, {replace:true})
         })
     }
 
@@ -64,17 +58,9 @@ const SignIn = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" />
-                             {/*    <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label> */}
+                            
                             </div>
-                      {/*       <div className="form-control">
-                                <label className="label">
-                                    <LoadCanvasTemplate />
-                                </label>
-                                <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
-
-                            </div> */}
+                     
                             <div className="form-control mt-6">
                                 <input  className="cursor-pointer py-2 primary-design" type="submit" value="Login" />
                             </div>
