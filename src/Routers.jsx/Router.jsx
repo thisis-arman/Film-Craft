@@ -17,6 +17,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AddClass from "../Pages/Dashboard/InstructorDashboard/AddCLass/AddClass";
 import MyClass from "../Pages/Dashboard/InstructorDashboard/AddCLass/MyClass";
 import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
+import InstructorRoute from "./InstructorRoute";
 
 
 
@@ -60,15 +62,15 @@ const router = createBrowserRouter([
         children:[
             {
                 path:'admin',
-                element:<AdminDashboard/>
+                element:<AdminRoute><AdminDashboard/></AdminRoute>
             },
             {
                 path:'manage-users',
-                element:<ManageUsers/>
+                element:<AdminRoute><ManageUsers/></AdminRoute>
             },
             {
                 path:'manage-classes',
-                element:<ManageClasses/>
+                element:<AdminRoute><ManageClasses/></AdminRoute>
             },
             {
                 path:'selected-classes',
@@ -84,11 +86,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'add-class',
-                element:<AddClass/>
+                element:<InstructorRoute><AddClass/></InstructorRoute>
             },
             {
                 path:'my-classes',
-                element:<MyClass/>
+                element:<InstructorRoute><MyClass/></InstructorRoute>
             }
         ]
     }

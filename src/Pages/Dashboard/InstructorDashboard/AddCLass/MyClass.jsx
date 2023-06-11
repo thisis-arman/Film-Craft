@@ -1,6 +1,18 @@
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 
 const MyClass = () => {
+const {user}=useContext(AuthContext)
+
+const[myClasses, setMyClass]=useState([])
+
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/classes/instructor/${user.email}`)
+    .then(res =>res.json())
+    .then(data =>setMyClass(data))
+  },[])
 
     
 
@@ -14,20 +26,29 @@ const MyClass = () => {
     {/* head */}
     <thead>
       <tr className="primary-design">
-        <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Sl</th>
+        <th>Class Name</th>
+        <th>Price</th>
+        <th>Available Seats</th>
+        <th>Status</th>
+        <th>Enrolled</th>
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
+
+      {
+        myClasses.map((cls,i)=>
+        <tr className="" key={i}>
+        <th>{ 1+i}</th>
+        <td>{cls.ClassName}</td>
+        <td className="text-center">${cls.Price}</td>
+        <td>{cls.availableSeats}</td>
+        <td>{cls.status}</td>
+        <td>0</td>
       </tr>
+        
+        )}
+     
      
     </tbody>
   </table>

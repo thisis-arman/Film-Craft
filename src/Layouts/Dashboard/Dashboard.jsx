@@ -14,7 +14,7 @@ const [isInstructor] =useInstructor()
 console.log(isInstructor,'is he instructor')
 
    
-    const {user}=useContext(AuthContext)
+/*     const {user}=useContext(AuthContext)
 //console.log(user)
 const [savedUsers,setSavedUser]=useState([])
 
@@ -28,7 +28,7 @@ useEffect(()=>{
 const currentEmail = user.email
 
 const currentUser =savedUsers.filter(user => user.email === currentEmail && user)
-const currentUserRole = currentUser[0]?.role
+const currentUserRole = currentUser[0]?.role */
 //console.log(currentUserRole)
 
 // //console.log(allEmails)
