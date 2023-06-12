@@ -1,9 +1,39 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../../Provider/AuthProvider";
+import { FaEdit } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const MyClass = () => {
+
+  
 const {user}=useContext(AuthContext)
+
+
+/* 
+const handleUpdateClass = (item) => {
+  //console.log(item)
+  fetch(`http://localhost:5000/classes/update/${item._id}`, {
+      method: "PATCH",
+      headers: {
+          "content-type": "application/json"
+      }
+  })
+      .then(res => res.json())
+      .then(data => {
+          //console.log(data)
+          if (data.modifiedCount > 0) {
+              Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Approved successfully.',
+                  showConfirmButton: false,
+                  timer: 1500
+              });
+
+          }
+      })
+} */
 
 const[myClasses, setMyClass]=useState([])
 
@@ -12,7 +42,7 @@ const[myClasses, setMyClass]=useState([])
     fetch(`http://localhost:5000/classes/instructor/${user.email}`)
     .then(res =>res.json())
     .then(data =>setMyClass(data))
-  },[])
+  },[user.email])
 
     
 
@@ -32,6 +62,8 @@ const[myClasses, setMyClass]=useState([])
         <th>Available Seats</th>
         <th>Status</th>
         <th>Enrolled</th>
+        <th>Edit</th>
+        <th>Feedback</th>
       </tr>
     </thead>
     <tbody>
@@ -45,6 +77,8 @@ const[myClasses, setMyClass]=useState([])
         <td>{cls.availableSeats}</td>
         <td>{cls.status}</td>
         <td>0</td>
+        <td ><Link to={`/dashboard/my-classes/${cls._id}`}><FaEdit className="h-6 w-6"/></Link></td>
+        <td>Feedback</td>
       </tr>
         
         )}
@@ -53,6 +87,10 @@ const[myClasses, setMyClass]=useState([])
     </tbody>
   </table>
 </div>
+
+
+
+{/*  */}
             
         </div>
     );

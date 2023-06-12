@@ -27,3 +27,18 @@ background-color: transparent;
 .cover{
   background-image: url();
 }
+
+.container-t {
+  background: url(/newyork.jpg) center no-repeat;
+  height: 188vh;
+  }
+
+
+  .container-t:before {
+  content: '';
+  position: absolute;
+  background: url(/splash.webp) center no-repeat;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode:screen;
+  }

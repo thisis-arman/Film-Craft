@@ -38,7 +38,7 @@ const makeApproved = (item) => {
 }
 const makeDenied = (item) => {
     //console.log(item)
-    fetch(`http://localhost:5000/classes/approved/${item._id}`, { 
+    fetch(`http://localhost:5000/classes/denied/${item._id}`, { 
         method: "PATCH",
         headers: {
             "content-type": "application/json"

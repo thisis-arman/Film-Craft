@@ -6,12 +6,16 @@ const Instructors = () => {
     //console.log('classdata', classesData)
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/classes')
             .then(res => res.json())
-            .then(data => setClassesData(data.classes))
+            .then(data => setClassesData(data))
     }, [])
 
 
+/*     useEffect(()=>{
+      useEffec
+    },[])
+ */
 
     return (
         <div>
@@ -27,11 +31,13 @@ const Instructors = () => {
             // //console.log(i, item?.instructors[0]?.name)
             <div key={i} className="p-2 lg:w-1/3 md:w-1/2 w-full">
       <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-        <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src={item.instructors.image} />
+        <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src={item.image} />
         <div className="flex-grow">
           {/* <h2 className="text-gray-900 title-font font-medium">{item?.instructors[0].name}</h2> */}
-          <h2 className="font-bold text-2xl">{item?.instructors[0]?.name}</h2>
-          <p className="text-gray-500">{ item?.instructors[0]?.background}</p>
+          <h2 className="font-bold text-2xl">{item?.name}</h2>
+         {item.email && <h2 className="font-semibold text-md"> {item?.email}</h2>}
+         <p>Total Students: {item.enrolled}</p>
+          {/* <p className="text-gray-500">{ item?.instructors[0]?.background}</p> */}
         </div>
       </div>
     </div> 

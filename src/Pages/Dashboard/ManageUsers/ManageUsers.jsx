@@ -19,6 +19,7 @@ const ManageUsers = () => {
 
     const {data :users =[],refetch} =useQuery(['users'],async()=>{
         const res = await fetch('http://localhost:5000/users')
+        console.log(res,'checking response')
         return res.json();
     })
 
@@ -46,6 +47,9 @@ const ManageUsers = () => {
                 }
             })
     }
+console.log(users)
+
+
     const handleMakeInstructor = (user) => {
         //console.log(user)
         fetch(`http://localhost:5000/users/instructor/${user._id}`, {
@@ -98,7 +102,7 @@ const ManageUsers = () => {
                                     <td>
                                         <div className="avatar">
                                             <div className="mask mask-squircle w-12 h-12">
-                                                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                                                <img src={user?.image} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
                                     </td>

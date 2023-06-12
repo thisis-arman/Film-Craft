@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+// import { useContext, useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { AuthContext } from "../../Provider/AuthProvider";
+// import { AuthContext } from "../../Provider/AuthProvider";
 import useAdmin from "../../Hooks/useAdmin";
 import useInstructor from "../../Hooks/useInstructor";
 
@@ -54,15 +54,15 @@ const currentUserRole = currentUser[0]?.role */
 
                         {/* Sidebar content here */}
                         
-                        {isAdmin==='admin' ?<>
+                        {isAdmin ?<>
                             <li><NavLink to='admin'>Admin Dashboard</NavLink></li>
                         <li><NavLink to='manage-classes'>Manage classes</NavLink></li>
                         <li><NavLink to='manage-users'>Manage Users</NavLink></li>
                         </>:
-                        isInstructor ?<>
+                        isInstructor?<>
                         
                         <li><NavLink to='instructor'>Instructor Dashboard</NavLink></li>
-                        <li><NavLink to='add-class'>Add A Class</NavLink></li>
+                        <li><NavLink to='/dashboard/add-class'>Add A Class</NavLink></li>
                         <li><NavLink to='my-classes'>My Classes</NavLink></li>
                         </>
                         :

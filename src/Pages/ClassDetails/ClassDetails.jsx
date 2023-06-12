@@ -3,14 +3,17 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useCart from "../../Hooks/useCart";
-import useVerifyUserRole from "../../Hooks/useVerifyUserRole";
+import useInstructor from "../../Hooks/useInstructor";
+import useAdmin from "../../Hooks/useAdmin";
+
 
 
 const ClassDetails = () => {
     const {user}=useContext(AuthContext)
-    //console.log(user)
-    const [currentUserRole] = useVerifyUserRole()
-    //console.log(currentUserRole)
+   
+    const [isAdmin]=useAdmin()
+    const [isInstructor]=useInstructor()
+   
 
 
 
@@ -22,9 +25,25 @@ const ClassDetails = () => {
     
     const { ClassName, Price, durations, enrolled, category, image, keyLearnings, level, reviews, availableSeats, instructor } = singleClass;
     const handleAddToCart =(item) => {
-        //console.log(item)
+
+        const cartItem={
+            ClassName: item.ClassName,
+            Price:parseFloat(item.Price),
+            availableSeats: parseFloat(item.availableSeats),
+            email:item.email,
+            instructor:item.name,
+            image: item.image,
+            classId:item._id,
+            status: item.status,
+            category: item.category,
+            details:item.details,
+
+
+        }
+
+        // TODO: there has some issue ;
+       
         if(user && user.email){
-            const cartItem ={ClassName,image,availableSeats,enrolled,Price,email:user?.email,classId:singleClass._id};
             fetch('http://localhost:5000/carts',{
                 method: 'POST',
                   headers: {
@@ -84,14 +103,8 @@ const ClassDetails = () => {
             <div className=" md:order-2 order-1 h-60 w-full">
            <div className="p-16 border m-8">
            <h2 className="text-2xl font-bold">key Learnings:</h2>
-           <p className="py-4">{keyLearnings?.brief}</p>
-           <p>
-            {
-                keyLearnings?.keyFeatures?.map((item,i)=><li key={i}>{item}</li>)
-            }
-           </p>
-
-           
+           <p className="py-4">{singleClass?.details}</p>
+    
 
            </div>
             </div>
@@ -101,9 +114,9 @@ const ClassDetails = () => {
                     <div className="card-body">
                         <h2 className="card-title text-xl font-bold">{singleClass?.ClassName}</h2>
                         <p className="font-bold text-2xl">${singleClass?.Price}</p>
-                        <div className="card-actions ">
-                            <button onClick={()=>handleAddToCart(singleClass)} className={`btn btn-outline btn-success w-full `}>Add To Cart</button>
-                            <button className="btn btn-primary w-full">Buy Now</button>   
+                        <div className={`card-actions `}>
+                            <button onClick={()=>handleAddToCart(singleClass)} className={`btn btn-outline btn-success w-full  ${(isAdmin || isInstructor)&& 'btn-disabled '}`}>Add To Cart</button>
+                            <button className={`btn btn-primary w-full  ${(isAdmin || isInstructor)&& 'btn-disabled '}`}>Buy Now</button>   
                         </div>
                         <p className="font-semibold text-xl my-2">Summery :</p>
                         <p className="">Level: {singleClass?.level}</p>

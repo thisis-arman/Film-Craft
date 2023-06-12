@@ -29,6 +29,10 @@ const Categories = () => {
                 <h2 className="text-2xl font-semibold">{uniqueCategories[1]}</h2>
                 <h2 className="text-2xl font-semibold">{uniqueCategories[2]}</h2>
             </div>
+           {/*  <div className="container-t">
+
+
+            </div> */}
             <div>
 
 

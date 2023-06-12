@@ -19,7 +19,15 @@ const Navbar = () => {
       <li><NavLink to='/instructors'>Instructors</NavLink></li>
       <li><NavLink to='/classes'>Classes</NavLink></li>
       {/* TODO :make dashboard conditional */}
-      <li><NavLink to='dashboard'>Dashboard</NavLink></li>
+   {/*    to={
+                      isAdmin
+                        ? "/dashboard/adminhome"
+                        : isInstructor
+                        ? "/dashboard/instructorhome"
+                        : "/dashboard/studenthome"
+                    } */}
+     {user && <li><NavLink 
+     to='/dashboard'>Dashboard</NavLink></li>}
 
     </>
   )
@@ -66,8 +74,8 @@ const Navbar = () => {
 
 
           {user ? <><Link onClick={handleLogOut} className="btn-primary">Sign Out</Link>
-            <label tabIndex={0} className="ml-4 rounded-full btn-circle avatar">
-              <div className="w-10 rounded-full">
+            <label tabIndex={0} className=" pt-1 rounded-full btn-circle avatar">
+              <div className="w-9  h-9 m-1 rounded-full">
                 <img title={user?.displayName} src={user?.photoURL} />
               </div>
             </label>

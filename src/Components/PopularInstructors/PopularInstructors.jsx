@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 const PopularInstructors = () => {
     
     const [classesData, setClassesData] = useState([])
-    //console.log('classdata', classesData)
+    console.log('classdata', classesData)
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/classes')
             .then(res => res.json())
-            .then(data => setClassesData(data.classes))
+            .then(data => setClassesData(data))
     }, [])
-    // const classes =JSON.parse(classesData).Classes;
+    
     const sortedClass = classesData.sort((a, b) => b.enrolled - a.enrolled);
     const popularClasses=(sortedClass).slice(0, 6);
 
@@ -29,13 +29,16 @@ const PopularInstructors = () => {
 
     {
         popularClasses.map((item,i)=>
+        // console.log(i,item)
+
         <div key={i} className="p-4 shadow-md m-4 border">
         <div className="h-full flex  flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-1/3 object-cover object-center mb-4" src="https://dummyimage.com/200x200" />
+          <img alt="team" className="flex-shrink-0 rounded-lg w-1/3 object-cover object-center mb-4" src={`${item?.image} || 'https://plus.unsplash.com/premium_photo-1671581559476-10b8a92ffb77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'`} />
           <div className="w-full">
-            <h2 className="title-font font-medium text-lg text-gray-900">{item.instructors[0]?.name}</h2>
+            <h2 className="title-font font-medium text-lg text-gray-900">{item?.instructor}</h2>
+            <p>Total Student: {item?.enrolled}</p>
             
-            <p className="mb-4">{(item?.instructors[0]?.background).slice(0,200)}..</p>
+            {/* <p className="mb-4">{(item?.background).slice(0,200)}..</p> */}
             <span className="inline-flex">
               <a className="text-gray-500">
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
