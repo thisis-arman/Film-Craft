@@ -30,8 +30,7 @@ const ClassDetails = () => {
             ClassName: item.ClassName,
             Price:parseFloat(item.Price),
             availableSeats: parseFloat(item.availableSeats),
-            email:item.email,
-            instructor:item.name,
+            email:user.email,
             image: item.image,
             classId:item._id,
             status: item.status,
@@ -40,6 +39,7 @@ const ClassDetails = () => {
 
 
         }
+        console.log(cartItem)
 
         // TODO: there has some issue ;
        
@@ -52,7 +52,8 @@ const ClassDetails = () => {
                body: JSON.stringify(cartItem)
             })
             .then(res => res.json())
-            .then(data =>{//console.log(data)
+            .then(data =>{
+                console.log(data,'handle add to cart')
             if(data.insertedId){
                 refetch()
                 Swal.fire({

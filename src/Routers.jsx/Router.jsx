@@ -20,6 +20,8 @@ import PrivateRoute from "./PrivateRoute";
 import AdminRoute from "./AdminRoute";
 import InstructorRoute from "./InstructorRoute";
 import UpdateClass from "./UpdateClass";
+import Payment from "../Pages/Payments/Payment";
+import PaymentHistory from "../Pages/Dashboard/UserDashboard/PaymentHistory";
 
 
 
@@ -97,6 +99,15 @@ const router = createBrowserRouter([
                 path:'/dashboard/my-classes/:id',
                 element:<UpdateClass/>,
                 loader:({params})=> fetch(`http://localhost:5000/classes/${params.id}`)
+            },
+            {
+                path:'/dashboard/payment/:id',
+                element:<Payment/>,
+                loader:({params})=> fetch(`http://localhost:5000/carts/${params.id}`)
+            },
+            {
+                path:'payment-history',
+                element:<PaymentHistory/>
             }
         ]
     }

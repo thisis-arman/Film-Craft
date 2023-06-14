@@ -1,6 +1,7 @@
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import useCart from "../../../../Hooks/useCart";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const SelectedClasses = () => {
@@ -83,7 +84,7 @@ const SelectedClasses = () => {
                   <td>{item.email}</td>
                   <td>${item.Price}</td>
                   <td >
-                    <button  className="primary-design px-4 py-1">Pay</button>
+                    <Link to={`/dashboard/payment/${item._id}`} className="primary-design px-4 py-1">Pay</Link>
                   </td>
                   <td className="flex gap-2">
                     <FaEdit className="w-5 cursor-pointer h-5" />

@@ -102,7 +102,7 @@ console.log(users)
                                     <td>
                                         <div className="avatar">
                                             <div className="mask mask-squircle w-12 h-12">
-                                                <img src={user?.image} alt="Avatar Tailwind CSS Component" />
+                                                <img src={user?.photo} alt={user.name} />
                                             </div>
                                         </div>
                                     </td>

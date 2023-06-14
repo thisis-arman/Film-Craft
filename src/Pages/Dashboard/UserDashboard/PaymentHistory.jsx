@@ -1,8 +1,9 @@
 
 
-const EnrolledClasses = () => {
+const PaymentHistory = () => {
     return (
-        <div className="w-5/6 mx-auto">
+       
+               <div className="w-5/6 mx-auto">
            <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -41,7 +42,9 @@ const EnrolledClasses = () => {
 </div>
             
         </div>
+            
+       
     );
 };
 
-export default EnrolledClasses;
+export default PaymentHistory;

@@ -4,22 +4,22 @@ import { useEffect, useState } from "react";
 const PopularInstructors = () => {
     
     const [classesData, setClassesData] = useState([])
-    console.log('classdata', classesData)
+    const instructors = classesData.filter(user => user.role === "instructor")
 
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => setClassesData(data))
     }, [])
     
-    const sortedClass = classesData.sort((a, b) => b.enrolled - a.enrolled);
-    const popularClasses=(sortedClass).slice(0, 6);
+    const sortedClass = instructors.sort((a, b) => b.enrolled - a.enrolled);
+    const popularClasses=(sortedClass).slice(0, 9);
 
 
     return (
         <div>
             <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
+  <div className="container w-5/6 pl-8 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
       <h1 className="text-2xl font-medium title-font mb-4 text-gray-900">OUR TOP INSTRUCTOR</h1>
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably  heard of them.</p>
@@ -33,9 +33,10 @@ const PopularInstructors = () => {
 
         <div key={i} className="p-4 shadow-md m-4 border">
         <div className="h-full flex  flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-1/3 object-cover object-center mb-4" src={`${item?.image} || 'https://plus.unsplash.com/premium_photo-1671581559476-10b8a92ffb77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'`} />
+          <img alt="team" className="flex-shrink-0 rounded-lg w-2/3 object-cover object-center mb-4" src={`${item?.photo}`} />
           <div className="w-full">
-            <h2 className="title-font font-medium text-lg text-gray-900">{item?.instructor}</h2>
+            <h2 className="title-font font-medium text-2xl text-gray-900">{item?.name}</h2>
+            <h2 className="title-font font-medium text-lg text-gray-900">{item?.email}</h2>
             <p>Total Student: {item?.enrolled}</p>
             
             {/* <p className="mb-4">{(item?.background).slice(0,200)}..</p> */}
