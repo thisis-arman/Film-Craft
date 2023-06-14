@@ -1,11 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import Checkout from "./Checkout";
+import CheckoutForm from "./Checkout";
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_PUBLISHED_KEY);
-
+console.log(import.meta.env.VITE_PAYMENT_PUBLISHED_KEY)
 
 const Payment = () => {
     const item = useLoaderData()
@@ -19,7 +19,7 @@ const Payment = () => {
       </h3>
       <div className="max-w-3xl mx-auto my-32 bg-white py-10 px-16">
         <Elements stripe={stripePromise}>
-          <Checkout Price={Price} cart={item} />
+          <CheckoutForm Price={Price} cart={item} />
         </Elements>
       </div>
     </div>

@@ -24,11 +24,11 @@ const Categories = () => {
     return (
         <div>
 
-            <div className="flex justify-evenly">
+           {/*  <div className="flex justify-evenly">
                 <h2 className="text-2xl font-semibold">{uniqueCategories[0]}</h2>
                 <h2 className="text-2xl font-semibold">{uniqueCategories[1]}</h2>
                 <h2 className="text-2xl font-semibold">{uniqueCategories[2]}</h2>
-            </div>
+            </div> */}
            {/*  <div className="container-t">
 
 
@@ -36,10 +36,10 @@ const Categories = () => {
             <div>
 
 
-            <section className="text-gray-600 body-font">
+            <section className=" body-font">
   <div className="container px-5 py-24 mx-auto flex flex-wrap">
     <div className=" w-full mb-20">
-      <h1 className="sm:text-3xl text-4xl font-medium title-font text-gray-900 lg:mb-0 mb-4 text-center">Our Students Works</h1>
+      <h1 className="sm:text-3xl text-4xl font-medium title-font  lg:mb-0 mb-4 text-center">Our Students Works</h1>
     
     </div>
     <div className="flex flex-wrap md:-m-2 -m-1">

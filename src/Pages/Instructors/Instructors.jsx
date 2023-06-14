@@ -21,11 +21,11 @@ const Instructors = () => {
 
     return (
         <div>
-          <section className="text-gray-600 body-font">
+          <section className="body-font">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="sm:text-3xl md:text-4xl font-bold  mb-4 text-gray-900">Our Instructors</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">They egerly  want to help you to build your career in film making industry.We always want to serve our best to our students</p>
+      <h1 className="sm:text-3xl md:text-4xl font-bold  mb-4 ">Our Instructors</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed ">They egerly  want to help you to build your career in film making industry.We always want to serve our best to our students</p>
     </div>
     <div className="flex flex-wrap -m-2">
         {

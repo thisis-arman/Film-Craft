@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaCartPlus } from 'react-icons/fa';
+import { BiMoon, BiSun } from 'react-icons/bi';
 import useCart from "../../Hooks/useCart";
 
 
@@ -13,6 +14,28 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
   }
+
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  // update state on toggle
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  // set theme state in localstorage on mount & also update localstorage on state change
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    // add custom data-theme attribute to html tag required to update theme using DaisyUI
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+
   const menuOptions = (
     <>
       <li><NavLink to='/'>Home</NavLink></li>
@@ -52,6 +75,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {/* cart */}
+
+
           <Link to='dashboard/selected-classes' >
             <div className="indicator mr-4">
               <span className="indicator-item badge badge-secondary ">+{cart.length || 0}</span>
@@ -59,17 +84,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-         {/*  <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul> */}
-      {/* TODO:TRY TO MAKE PROFILE DROPDOWN TYPE */}
+            {/* TODO:TRY TO MAKE PROFILE DROPDOWN TYPE */}
 
 
 
@@ -84,7 +99,20 @@ const Navbar = () => {
               <Link to='/login' className="btn-primary">Sign in</Link>
             </>
           }
+                  <button className="btn btn-square btn-ghost">
+          <label className="swap swap-rotate w-12 h-12">
+            <input type="checkbox" 
+             
+             onChange={handleToggle}
+            />
+            {/* light theme sun image */}
+            <BiSun className="w-8 h-8 swap-off"/>
+            {/* dark theme moon image */}
+            <BiMoon className='h-8 w-8 swap-on'/>
+          </label>
+        </button>
         </div>
+
       </div>
 
     </div>
