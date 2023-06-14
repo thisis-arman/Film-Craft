@@ -1,44 +1,57 @@
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../../Provider/AuthProvider";
 
 
 const EnrolledClasses = () => {
+  const {user} =useContext((AuthContext))
+  const [payments, setPayments]=useState([])
+  console.log(payments,'payments............')
+
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/payments?email=${user.email}`)
+    .then(res => res.json())
+    .then(data => setPayments(data))
+  },[user])
+  
     return (
         <div className="w-5/6 mx-auto">
-           <div className="overflow-x-auto">
+         <div className="overflow-x-auto">
   <table className="table">
-    {/* head */}
+
     <thead>
       <tr className="primary-design">
         <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Image</th>
+        <th>Class Name</th>
+        <th>Email</th>
+        <th>Price</th>
+        
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-      </tr>
-      {/* row 2 */}
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      {/* row 3 */}
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
+    
+     {
+      payments.map((payment,i)=>
+      <tr key={payment._id}>
+      <th>{1+i}</th>
+      <td>
+      <div className="avatar">
+            <div className="mask mask-squircle w-12 h-12">
+              <img src={payment.image} alt={payment.ClassName} />
+            </div>
+            </div>
+      </td>
+      <td>{payment.ClassName}</td>
+      <td>{payment.email}</td>
+      <td>${payment.Price}</td>
+     
+    </tr>
+     )
+     }
     </tbody>
   </table>
-</div>
+</div> 
             
         </div>
     );

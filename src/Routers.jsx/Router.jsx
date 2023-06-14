@@ -22,6 +22,7 @@ import InstructorRoute from "./InstructorRoute";
 import UpdateClass from "./UpdateClass";
 import Payment from "../Pages/Payments/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserDashboard/PaymentHistory";
+import InstructorDashboard from "../Pages/Dashboard/InstructorDashboard/AddCLass/InstructorDashboard";
 
 
 
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
             {
                 path:'enrolled-classes',
                 element:<EnrolledClasses/>
+            },
+            {
+                path:'instructor',
+                element:<InstructorDashboard/>
             },
             {
                 path:'add-class',
