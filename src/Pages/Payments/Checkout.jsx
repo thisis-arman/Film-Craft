@@ -19,7 +19,7 @@ const [classes,setClasses]=useState([])
 
 
   useEffect(()=>{
-    fetch('http://localhost:5000/classes')
+    fetch('https://film-craft-server.vercel.app/classes')
     .then(res=>res.json())
     .then(data =>setClasses(data))
   },[])
@@ -86,7 +86,7 @@ useEffect(()=>{
 
       const updatedSeat = classes.map((cls) => {
         if (cls._id === cart.classId) {
-          fetch(`http://localhost:5000/updateClass/${cart.classId}`, {
+          fetch(`https://film-craft-server.vercel.app/updateClass/${cart.classId}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

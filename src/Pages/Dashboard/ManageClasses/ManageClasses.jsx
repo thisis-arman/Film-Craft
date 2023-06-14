@@ -8,14 +8,14 @@ const ManageClasses = () => {
     // //console.log('classdata', classesData)
 
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://film-craft-server.vercel.app/classes')
             .then(res => res.json())
             .then(data => setClassesData(data))
     }, [])
 
 const makeApproved = (item) => {
     //console.log(item)
-    fetch(`http://localhost:5000/classes/approved/${item._id}`, {
+    fetch(`https://film-craft-server.vercel.app/classes/approved/${item._id}`, {
         method: "PATCH",
         headers: {
             "content-type": "application/json"
@@ -38,7 +38,7 @@ const makeApproved = (item) => {
 }
 const makeDenied = (item) => {
     //console.log(item)
-    fetch(`http://localhost:5000/classes/denied/${item._id}`, { 
+    fetch(`https://film-craft-server.vercel.app/classes/denied/${item._id}`, { 
         method: "PATCH",
         headers: {
             "content-type": "application/json"

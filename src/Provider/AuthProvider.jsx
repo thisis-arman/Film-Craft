@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
 
 
       if(loggedUser){
-        axios.post('http://localhost:5000/jwt',{email:loggedUser.email})
+        axios.post('https://film-craft-server.vercel.app/jwt',{email:loggedUser.email})
         .then(data =>{
           console.log(data)
           localStorage.setItem('access_token', data.data.token)

@@ -44,7 +44,7 @@ const ClassDetails = () => {
         // TODO: there has some issue ;
        
         if(user && user.email){
-            fetch('http://localhost:5000/carts',{
+            fetch('https://film-craft-server.vercel.app/carts',{
                 method: 'POST',
                   headers: {
                   'Content-Type': 'application/json'

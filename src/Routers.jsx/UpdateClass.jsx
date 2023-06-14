@@ -23,7 +23,7 @@ const UpdateClass = () => {
         const newClass ={name:user.displayName ,email,availableSeats,Price:price,image:photo,ClassName:className,
              category:category,status:"pending",keyLearnings : details}
         
-        fetch(`http://localhost:5000/classes/${classData._id}`,{
+        fetch(`https://film-craft-server.vercel.app/classes/${classData._id}`,{
           method:'PUT',
           headers:{
             'Content-Type':'application/json', 
@@ -62,7 +62,7 @@ const UpdateClass = () => {
         const newClass ={name:user.displayName ,email,availableSeats,Price:price,image:photo,ClassName:className,
              category:category,status:"pending" ,enrolled:0 ,keyLearnings : details}
         //console.log(newClass)
-        fetch("http://localhost:5000/classes", {
+        fetch("https://film-craft-server.vercel.app/classes", {
             method:"PATCH",
             headers:{
                 "content-type": "application/json",

@@ -47,7 +47,7 @@ const router = createBrowserRouter([
     {
         path:'/class/:id',
         element:<PrivateRoute><ClassDetails/></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/classes/${params.id}`)
+        loader:({params})=>fetch(`https://film-craft-server.vercel.app/classes/${params.id}`)
     },
     {
         path:'sign-up',
@@ -103,12 +103,12 @@ const router = createBrowserRouter([
             {
                 path:'/dashboard/my-classes/:id',
                 element:<UpdateClass/>,
-                loader:({params})=> fetch(`http://localhost:5000/classes/${params.id}`)
+                loader:({params})=> fetch(`https://film-craft-server.vercel.app/classes/${params.id}`)
             },
             {
                 path:'/dashboard/payment/:id',
                 element:<Payment/>,
-                loader:({params})=> fetch(`http://localhost:5000/carts/${params.id}`)
+                loader:({params})=> fetch(`https://film-craft-server.vercel.app/carts/${params.id}`)
             },
             {
                 path:'payment-history',

@@ -13,7 +13,7 @@ const {user}=useContext(AuthContext)
 /* 
 const handleUpdateClass = (item) => {
   //console.log(item)
-  fetch(`http://localhost:5000/classes/update/${item._id}`, {
+  fetch(`https://film-craft-server.vercel.app/classes/update/${item._id}`, {
       method: "PATCH",
       headers: {
           "content-type": "application/json"
@@ -39,7 +39,7 @@ const[myClasses, setMyClass]=useState([])
 
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/classes/instructor/${user.email}`)
+    fetch(`https://film-craft-server.vercel.app/classes/instructor/${user.email}`)
     .then(res =>res.json())
     .then(data =>setMyClass(data))
   },[user.email])

@@ -8,7 +8,7 @@ const {user}=useContext(AuthContext)
 
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/classes/instructor/${user.email}`)
+    fetch(`https://film-craft-server.vercel.app/classes/instructor/${user.email}`)
     .then(res =>res.json())
     .then(data =>setMyClass(data))
   },[user])

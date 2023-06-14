@@ -9,7 +9,7 @@ const ManageUsers = () => {
    /*  const [users, setUsers] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://film-craft-server.vercel.app/users')
             .then(res => res.json())
             .then(data => setUsers(data))
 
@@ -18,14 +18,38 @@ const ManageUsers = () => {
 
 
     const {data :users =[],refetch} =useQuery(['users'],async()=>{
-        const res = await fetch('http://localhost:5000/users')
+        const res = await fetch('https://film-craft-server.vercel.app/users')
         console.log(res,'checking response')
         return res.json();
     })
 
+    const deleteUser =(user)=>{
+        fetch(`https://film-craft-server.vercel.app/users/${user._id}`,{
+            method: 'DELETE',
+            headers:{
+                'content-type': 'application/json'
+            }
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            console.log(data)
+            if(data.deletedCount > 0){
+                refetch()
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `User deleted!!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        })
+    }
+
+
     const handleMakeAdmin = (user) => {
         //console.log(user)
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://film-craft-server.vercel.app/users/admin/${user._id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
@@ -52,7 +76,7 @@ console.log(users)
 
     const handleMakeInstructor = (user) => {
         //console.log(user)
-        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+        fetch(`https://film-craft-server.vercel.app/users/instructor/${user._id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
@@ -126,7 +150,7 @@ console.log(users)
                                     </td>
 
                                     <td>
-                                        <button className="cursor-pointer"><FaTrashAlt className="h-6 text-red-500 w-6" /></button>
+                                        <button onClick={()=>deleteUser(user)} className="cursor-pointer"><FaTrashAlt className="h-6 text-red-500 w-6" /></button>
                                     </td>
                                 </tr>
 

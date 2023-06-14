@@ -7,7 +7,7 @@ const PopularInstructors = () => {
     const instructors = classesData.filter(user => user.role === "instructor")
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://film-craft-server.vercel.app/users')
             .then(res => res.json())
             .then(data => setClassesData(data))
     }, [])

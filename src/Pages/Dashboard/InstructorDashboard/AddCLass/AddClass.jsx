@@ -19,7 +19,7 @@ const AddClass = () => {
         const newClass ={name:user.displayName ,email,availableSeats,Price:price,image:photo,ClassName:className,
              category:category,status:"pending" ,enrolled:0}
         //console.log(newClass)
-        fetch("http://localhost:5000/classes", {
+        fetch("https://film-craft-server.vercel.app/classes", {
             method:"POST",
             headers:{
                 "content-type": "application/json",

@@ -8,7 +8,7 @@ const useVerifyUserRole=()=>{
 const [savedUsers,setSavedUser]=useState([])
 
 useEffect(()=>{
-    fetch('http://localhost:5000/users')
+    fetch('https://film-craft-server.vercel.app/users')
     .then(res=>res.json())
     .then(users =>setSavedUser(users))
 },[])

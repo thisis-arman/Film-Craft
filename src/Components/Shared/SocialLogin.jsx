@@ -16,7 +16,7 @@ const signInWithGoogle =()=>{
     .then(result => {
       const loggedInUser = result.user
       const saveUser ={name:loggedInUser.displayName, email:loggedInUser.email,role:"student",photo:loggedInUser.photoURL}
-      fetch('http://localhost:5000/users',{
+      fetch('https://film-craft-server.vercel.app/users',{
         method: 'POST',
         headers: {
                   'Content-Type': 'application/json'
