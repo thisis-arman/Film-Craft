@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// import { AuthContext } from "../../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
@@ -22,9 +21,7 @@ const UpdateClass = () => {
         const category = form.category.value;
         const details = form.details.value;
         const newClass ={name:user.displayName ,email,availableSeats,Price:price,image:photo,ClassName:className,
-             category:category,status:"pending" ,enrolled:0 ,keyLearnings : details}
-        //console.log(newClass)
-    
+             category:category,status:"pending",keyLearnings : details}
         
         fetch(`http://localhost:5000/classes/${classData._id}`,{
           method:'PUT',

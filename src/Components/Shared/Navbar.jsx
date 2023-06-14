@@ -4,12 +4,16 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { FaCartPlus } from 'react-icons/fa';
 import { BiMoon, BiSun } from 'react-icons/bi';
 import useCart from "../../Hooks/useCart";
+import useAdmin from "../../Hooks/useAdmin";
+import useInstructor from "../../Hooks/useInstructor";
 
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
-  const [cart]=useCart()
+  const [cart] = useCart()
   //console.log(cart)
+  const [isAdmin]=useAdmin()
+  const [isInstructor]=useInstructor()
 
   const handleLogOut = () => {
     logOut()
@@ -42,15 +46,24 @@ const Navbar = () => {
       <li><NavLink to='/instructors'>Instructors</NavLink></li>
       <li><NavLink to='/classes'>Classes</NavLink></li>
       {/* TODO :make dashboard conditional */}
-   {/*    to={
+      {/*    to={
                       isAdmin
                         ? "/dashboard/adminhome"
                         : isInstructor
                         ? "/dashboard/instructorhome"
                         : "/dashboard/studenthome"
                     } */}
-     {user && <li><NavLink 
-     to='/dashboard'>Dashboard</NavLink></li>}
+      {user && <li><NavLink
+
+        to={
+          isAdmin
+            ? "/dashboard/admin"
+            : isInstructor
+              ? "/dashboard/instructor"
+              : "/dashboard/selected-classes"
+        }
+
+      >Dashboard</NavLink></li>}
 
     </>
   )
@@ -84,7 +97,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-            {/* TODO:TRY TO MAKE PROFILE DROPDOWN TYPE */}
+          {/* TODO:TRY TO MAKE PROFILE DROPDOWN TYPE */}
 
 
 
@@ -99,18 +112,18 @@ const Navbar = () => {
               <Link to='/login' className="btn-primary">Sign in</Link>
             </>
           }
-                  <button className="btn btn-square btn-ghost">
-          <label className="swap swap-rotate w-12 h-12">
-            <input type="checkbox" 
-             
-             onChange={handleToggle}
-            />
-            {/* light theme sun image */}
-            <BiSun className="w-8 h-8 swap-off"/>
-            {/* dark theme moon image */}
-            <BiMoon className='h-8 w-8 swap-on'/>
-          </label>
-        </button>
+          <button className="btn btn-square btn-ghost">
+            <label className="swap swap-rotate w-12 h-12">
+              <input type="checkbox"
+
+                onChange={handleToggle}
+              />
+              {/* light theme sun image */}
+              <BiSun className="w-8 h-8 swap-off" />
+              {/* dark theme moon image */}
+              <BiMoon className='h-8 w-8 swap-on' />
+            </label>
+          </button>
         </div>
 
       </div>

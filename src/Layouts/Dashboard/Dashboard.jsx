@@ -51,7 +51,7 @@ const currentUserRole = currentUser[0]?.role */
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
                 </div>
-                <div className="drawer-side py-16 bg-green-200">
+                <div className="drawer-side py-16 bg-gradient-to-r from-purple-200 from-10% via-sky-200 via-30% to-emerald-200 to-90%">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full ">
 
