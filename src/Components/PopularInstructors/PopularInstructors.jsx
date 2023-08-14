@@ -17,23 +17,23 @@ const PopularInstructors = () => {
 
 
     return (
-        <div>
+        <div className="px-4">
             <section className=" body-font">
-  <div className="container w-5/6 pl-8 py-24 mx-auto">
+  <div className="container w-5/6  py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="text-2xl font-medium title-font mb-4 ">OUR TOP INSTRUCTOR</h1>
+      <h1 className="text-2xl font-bold title-font mb-4 ">OUR TOP INSTRUCTOR</h1>
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably  heard of them.</p>
     </div>
 
-    <div className= " w-full -m-4 grid md:grid-cols-3">
+    <div className= " w-full grid md:grid-cols-3 gap-4 grid-cols-1">
 
     {
         popularClasses.map((item,i)=>
         // console.log(i,item)
 
-        <div key={i} className="p-4 shadow-md m-4 border">
-        <div className="h-full flex  flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-2/3 object-cover object-center mb-4" src={`${item?.photo}`} />
+        <div key={i} className="p-4 shadow-md  border">
+        <div className="h-full w-full flex  flex-col items-center text-center">
+          <img alt="team" className="flex-shrink-0 rounded-full h-36 w-36 mx-auto object-cover object-center mb-4" src={`${item?.photo}`} />
           <div className="w-full">
             <h2 className="title-font font-medium text-2xl">{item?.name}</h2>
             <h2 className="title-font font-medium text-lg">{item?.email}</h2>
