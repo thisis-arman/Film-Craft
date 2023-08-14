@@ -79,7 +79,7 @@ const Navbar = () => {
               {menuOptions}
             </ul>
           </div>
-          <Link to='/' className="uppercase font-bold text-2xl">FILM <span className="text-yellow-600 ">Carft</span></Link>
+          <Link to='/' className="uppercase font-bold text-2xl md:block hidden">FILM <span className="text-yellow-600 ">Carft</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -90,7 +90,7 @@ const Navbar = () => {
           {/* cart */}
 
 
-          <Link to='dashboard/selected-classes' >
+          <Link to='dashboard/selected-classes' className="md:block hidden" >
             <div className="indicator mr-4">
               <span className="indicator-item badge badge-secondary ">+{cart.length || 0}</span>
               <button className="btn btn-ghost"> <FaCartPlus /></button>

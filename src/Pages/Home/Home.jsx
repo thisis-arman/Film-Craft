@@ -7,6 +7,8 @@ import PopularInstructors from '../../Components/PopularInstructors/PopularInstr
 import Slider from './HomeComponents/Slider';
 import Testimonials from './HomeComponents/Testimonials';
 import ContactForm from './HomeComponents/ContactForm';
+import Offer from './HomeComponents/Offer';
+import BlogSection from './HomeComponents/BlogSection';
 
 const Home = () => {
     return (
@@ -14,8 +16,10 @@ const Home = () => {
 
            <Slider/>
            <PopularClasses/>
+           <Offer/>
            <PopularInstructors/>
            <Testimonials/>
+           <BlogSection/>
            <ContactForm/>
            <Categories/>
 

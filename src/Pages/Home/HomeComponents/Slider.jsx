@@ -1,4 +1,4 @@
-import AwesomeSlider from "react-awesome-slider";
+// import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { Link } from "react-router-dom";
 import AOS from "aos";

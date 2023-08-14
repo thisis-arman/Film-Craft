@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 .btn-primary{
-  @apply inline-flex items-center py-2 px-6  mb-4 font-medium text-white transition duration-200 rounded shadow-md  md:mb-0 bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
+  @apply inline-flex items-center md:py-2 py-1 md:px-6 px-2 my-2 font-medium text-white transition duration-200 rounded shadow-md  md:mb-0 bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
 }
 
 .primary-design{
+
   @apply text-white transition duration-300 rounded shadow-md  md:mb-0 bg-gradient-to-r from-yellow-200 to-blue-300 hover:from-pink-200 hover:to-yellow-500
 }
 .sm-btn{
