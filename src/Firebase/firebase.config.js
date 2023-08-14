@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:  import.meta.env.VITE_APIKEY,
-  authDomain:  import.meta.env.VITE_AUTHDOMAIN,
-  projectId:  import.meta.env.VITE_PROJECTID,
-  storageBucket:  import.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId:  import.meta.env.VITE_MESSAGINGSENDERID,
-  appId:  import.meta.env.VITE_APPID,
+  apiKey: "AIzaSyApfWwPU2eP_hvhziBctZFb8bztnN6bBaI",
+  authDomain: "film-craft.firebaseapp.com",
+  projectId: "film-craft",
+  storageBucket: "film-craft.appspot.com",
+  messagingSenderId: "120706154424",
+  appId: "1:120706154424:web:7867468298f99675cf994d"
 };
 
 // Initialize Firebase
