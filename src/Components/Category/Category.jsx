@@ -9,7 +9,7 @@ const Category = () => {
       <h2 className="text-3xl font-bold sm:text-4xl">Browse Top Categories</h2>
       
     </div>
-    <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
 
       <a className="  border flex items-center bg-[#EBEBFF] gap-4 border-gray-800 p-4 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10" href="/services/digital-campaigns">
      <img className="p-2 bg-white w-12" src="https://i.ibb.co/PDQQrCh/direction.png" alt="" />

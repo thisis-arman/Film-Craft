@@ -17,9 +17,9 @@ const PopularInstructors = () => {
 
 
     return (
-        <div className="px-4">
+        <div className="">
             <section className=" body-font">
-  <div className="container w-5/6 bg-white border my-24 p-8 mx-auto">
+  <div className="container w-5/6 bg-white border my-24 md:p-10 p-4 shadow mx-auto">
     <div className="flex flex-col text-center w-full mb-10">
       <h1 className="text-3xl font-bold title-font  ">TOP INSTRUCTOR OF THE MONTH</h1>
      

@@ -2,6 +2,7 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+// import {blog} from '../../../../public/animation_llc2isqz.json'
 
 const BlogSection = () => {
   useEffect(() => {

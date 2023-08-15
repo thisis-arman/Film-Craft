@@ -49,7 +49,7 @@ const PopularClasses = () => {
                             <AiOutlineUser/> <span>
                         {cls.enrolled} students</span></p>
                         <p className="py-1 text-md flex gap-1 items-center" ><FaStar className="text-yellow-500"/> <span >
-                        {cls.reviews} ({cls.numberOfReviews} +reviews)</span></p>
+                        {cls.reviews} ({cls.numberOfReviews}+)</span></p>
                         </div>
                       
                         <div className="card-actions justify-end">

@@ -10,6 +10,7 @@ import ContactForm from './HomeComponents/ContactForm';
 import Offer from './HomeComponents/Offer';
 import BlogSection from './HomeComponents/BlogSection';
 import Category from '../../Components/Category/Category';
+import Companies from './HomeComponents/Companies';
 
 const Home = () => {
     return (
@@ -24,6 +25,7 @@ const Home = () => {
            <BlogSection/>
            <ContactForm/>
            <Categories/>
+           <Companies/>
 
 
         </div>
