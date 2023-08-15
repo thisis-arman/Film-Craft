@@ -23,100 +23,106 @@ import UpdateClass from "./UpdateClass";
 import Payment from "../Pages/Payments/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserDashboard/PaymentHistory";
 import InstructorDashboard from "../Pages/Dashboard/InstructorDashboard/AddCLass/InstructorDashboard";
+import BeInstructor from "../Pages/Home/HomeComponents/BeInstructor";
+import BeInstructorPage from "../Pages/BeInstructorPage/BeInstructorPage";
 
 
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element: <Main/>,
-      errorElement:<ErrorPage/>,
-      children: [
-    {
-        path:'/',
-        element:<Home/>
-    },
-    {
-        path:'instructors',
-        element:<Instructors/>
-    },
-    {
-        path:'classes',
-        element:<Classes/>
-    },
-    {
-        path:'/class/:id',
-        element:<PrivateRoute><ClassDetails/></PrivateRoute>,
-        loader:({params})=>fetch(`https://film-craft-server.vercel.app/classes/${params.id}`)
-    },
-    {
-        path:'sign-up',
-        element:<SignUp/>
+        path: "/",
+        element: <Main />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: '/',
+                element: <Home />
+            },
+            {
+                path: 'instructors',
+                element: <Instructors />
+            },
+            {
+                path: 'classes',
+                element: <Classes />
+            },
+            {
+                path: '/class/:id',
+                element: <PrivateRoute><ClassDetails /></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://film-craft-server.vercel.app/classes/${params.id}`)
+            },
+            {
+                path: 'sign-up',
+                element: <SignUp />
 
+            },
+            {
+                path: 'login',
+                element: <SignIn />
+            },
+            {
+                path: '/be-instructor',
+                element: <BeInstructorPage />
+            }
+        ]
     },
     {
-        path:'login',
-        element:<SignIn/>
-    }
-      ]
-    },
-    {
-        path:'/dashboard',
-        element:<Dashboard/>,
-        children:[
+        path: '/dashboard',
+        element: <Dashboard />,
+        children: [
             {
-                path:'admin',
-                element:<AdminRoute><AdminDashboard/></AdminRoute>
+                path: 'admin',
+                element: <AdminRoute><AdminDashboard /></AdminRoute>
             },
             {
-                path:'manage-users',
-                element:<AdminRoute><ManageUsers/></AdminRoute>
+                path: 'manage-users',
+                element: <AdminRoute><ManageUsers /></AdminRoute>
             },
             {
-                path:'manage-classes',
-                element:<AdminRoute><ManageClasses/></AdminRoute>
+                path: 'manage-classes',
+                element: <AdminRoute><ManageClasses /></AdminRoute>
             },
             {
-                path:'selected-classes',
-                element:<SelectedClasses/>
+                path: 'selected-classes',
+                element: <SelectedClasses />
             },
             {
-                path:'student',
-                element:<UserDashboard/>
+                path: 'student',
+                element: <UserDashboard />
             },
             {
-                path:'enrolled-classes',
-                element:<EnrolledClasses/>
+                path: 'enrolled-classes',
+                element: <EnrolledClasses />
             },
             {
-                path:'instructor',
-                element:<InstructorDashboard/>
+                path: 'instructor',
+                element: <InstructorDashboard />
             },
             {
-                path:'add-class',
-                element:<InstructorRoute><AddClass/></InstructorRoute>
+                path: 'add-class',
+                element: <InstructorRoute><AddClass /></InstructorRoute>
             },
             {
-                path:'my-classes',
-                element:<InstructorRoute><MyClass/></InstructorRoute>
+                path: 'my-classes',
+                element: <InstructorRoute><MyClass /></InstructorRoute>
             },
             {
-                path:'/dashboard/my-classes/:id',
-                element:<UpdateClass/>,
-                loader:({params})=> fetch(`https://film-craft-server.vercel.app/classes/${params.id}`)
+                path: '/dashboard/my-classes/:id',
+                element: <UpdateClass />,
+                loader: ({ params }) => fetch(`https://film-craft-server.vercel.app/classes/${params.id}`)
             },
             {
-                path:'/dashboard/payment/:id',
-                element:<Payment/>,
-                loader:({params})=> fetch(`https://film-craft-server.vercel.app/carts/${params.id}`)
+                path: '/dashboard/payment/:id',
+                element: <Payment />,
+                loader: ({ params }) => fetch(`https://film-craft-server.vercel.app/carts/${params.id}`)
             },
             {
-                path:'payment-history',
-                element:<PaymentHistory/>
+                path: 'payment-history',
+                element: <PaymentHistory />
             }
         ]
     }
-  ]);
+]);
 
 
-  export default router;
+export default router;
