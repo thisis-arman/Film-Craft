@@ -1,9 +1,16 @@
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Offer = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, [])
     return (
-        <div>
-            <section className="overflow-hidden md:rounded-lg my-12 rounded-none shadow-2xl md:grid md:grid-cols-3">
+        <div data-aos="fade-up" data-aos-delay="400" className="md:px-12 px-4">
+            <section className="overflow-hidden  md:rounded-lg my-12 rounded-none shadow-2xl md:grid md:grid-cols-3">
   <img
     alt="Trainer"
     src="https://i.ibb.co/sQ31hMb/wepik-export-20230714094700-QLW1.png"

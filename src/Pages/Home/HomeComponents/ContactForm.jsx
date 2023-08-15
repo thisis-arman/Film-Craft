@@ -1,8 +1,8 @@
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useState } from 'react';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
 const ContactForm = () => {
   const [name, setName] = useState("");

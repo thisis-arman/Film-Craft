@@ -10,21 +10,20 @@ const Slider = () => {
   return (
     <div>
     
-      <section className="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat">
+      <section className="relative bg-[url(https://img.freepik.com/free-photo/man-filming-with-professional-camera-new-movie_23-2149066384.jpg?w=900&t=st=1692076782~exp=1692077382~hmac=06a45b568fcd7b8f432a31d17b2508d85544b49da5b631f4b105a116edb1b37a)] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-white bg-opacity-25 bg-gradient-to-r from-white/95 to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
         <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className="max-w-xl text-center sm:text-left rtl:sm:text-right">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
-              Let us find your
+              We Help You To Discover 
               <strong className="block font-extrabold text-rose-700">
-                Forever Home.
+              Things Differently.
               </strong>
             </h1>
 
             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
+           Our mission is to inspire you to perceive the world differently, fostering a curious spirit and unveiling hidden wonders. 
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 text-center">

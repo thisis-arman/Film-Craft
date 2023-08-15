@@ -9,12 +9,14 @@ import Testimonials from './HomeComponents/Testimonials';
 import ContactForm from './HomeComponents/ContactForm';
 import Offer from './HomeComponents/Offer';
 import BlogSection from './HomeComponents/BlogSection';
+import Category from '../../Components/Category/Category';
 
 const Home = () => {
     return (
         <div>
 
            <Slider/>
+           <Category/>
            <PopularClasses/>
            <Offer/>
            <PopularInstructors/>

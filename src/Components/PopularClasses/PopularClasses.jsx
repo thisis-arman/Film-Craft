@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const PopularClasses = () => {
     const [classesData, setClassesData] = useState([])
     //console.log('classdata', classesData)
 
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+        });
+      }, [])
     useEffect(() => {
         fetch('https://film-craft-server.vercel.app/classes')
             .then(res => res.json())
@@ -20,7 +27,7 @@ const PopularClasses = () => {
     // //console.log('popular',popularClasses)
 
     return (
-        <div className="w-full md:px-10 mx-auto px-4 ">
+        <div data-aos="fade-up" data-aos-delay="200" className="w-full md:px-10 mx-auto px-4 ">
             <h1 className="text-4xl font-bold text-center my-24">Popular Classes</h1>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
