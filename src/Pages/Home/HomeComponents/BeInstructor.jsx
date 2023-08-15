@@ -1,16 +1,16 @@
 const BeInstructor = () => {
   return (
-    <section className=" container py-16 mx-auto grid md:grid-cols-2 grid-cols-1 items-center gap-4 w-full">
-      <div className="bg-gradient-to-t from-[#ae431f] to-[#FF6636] flex justify-between items-center  ">
+    <section className=" container py-16 mx-auto px-4 grid md:grid-cols-2 grid-cols-1 items-center gap-4 w-full">
+      <div className="bg-gradient-to-t from-[#ae431f] to-[#FF6636] shadow-md shadow-black flex justify-between items-center max-h-[400px]   ">
         <div className="p-4 text-white">
           <h2 className="text-3xl font-bold py-4">Become An Instructor</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maiores, odio at iusto ab id.</p>
-          <button className="btn-primary">Become Instructor</button>
+          <button className="btn-primary">Start Teaching</button>
         </div>
         <img className='w-44' src="https://i.ibb.co/BjT8C25/wepik-export-20230815142021l1hs.png" alt="" />
       </div>
 
-      <div className="p-[29px] border">
+      <div className="p-[29px]  shadow-sm max-h-[400px] shadow-black">
         <h2 className="text-3xl font-bold text-left pb-4 ">Your teaching and earning steps</h2>
         <div className="grid grid-cols-2 gap-4">
           <div className="p-2 sm:max-w-sm w-full">
